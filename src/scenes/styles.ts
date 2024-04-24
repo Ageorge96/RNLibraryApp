@@ -14,7 +14,16 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontSize: 12,
+    fontWeight: 'bold',
     color: 'white',
     flex: 1,
+  },
+  content: {
+    flex: 8,
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    paddingTop: 15,
+    paddingLeft: 15,
   },
 });

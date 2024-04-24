@@ -8,7 +8,12 @@ const {Navigator, Screen} = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
 
 export const DrawerNavigator = () => (
-  <Navigator initialRouteName="Home" screenOptions={{drawerStyle: {backgroundColor: themePrimary}}}>
+  <Navigator
+    initialRouteName="Home"
+    screenOptions={{
+      drawerStyle: {backgroundColor: themePrimary},
+      drawerLabelStyle: {color: 'white'},
+    }}>
     <Screen name="Home" component={Home} />
     <Screen name="Bookshelf" component={Bookshelf} />
   </Navigator>
