@@ -5,6 +5,13 @@
  * @format
  */
 
+const {generate} = require('@storybook/react-native/scripts/generate');
+const path = require('path');
+
+generate({
+  configPath: path.resolve(__dirname, './.storybook'),
+});
+
 module.exports = {
   transformer: {
     getTransformOptions: async () => ({
@@ -13,5 +20,6 @@ module.exports = {
         inlineRequires: true,
       },
     }),
+    unstable_allowRequireContext: true,
   },
 };
