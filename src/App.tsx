@@ -10,7 +10,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import {Navigation} from './navigation/Navigator';
 
-export const App = (): JSX.Element => {
+export const App = (): React.JSX.Element => {
   return (
     <>
       <Navigation />
