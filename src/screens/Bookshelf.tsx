@@ -1,7 +1,10 @@
+/* eslint-disable prettier/prettier */
 import {View, Text, Pressable, StyleSheet} from 'react-native';
 import {Button as RNButton} from '../components/Button';
 import { themePrimary } from '../theme';
 import { FlatList } from 'react-native-gesture-handler';
+import { BookshelfListItem } from '../scenes/bookshelfListItem/BookshelfListItem';
+import { fa, faker } from '@faker-js/faker';
 
 export const Bookshelf = () => (
   // Sectionlist
@@ -18,6 +21,9 @@ export const Bookshelf = () => (
       <Button title="Edit Book" />
       <Button title="Remove Book" />
     </View> */}
+    <BookshelfListItem book={bookMocks[0]}/>
+    <BookshelfListItem book={bookMocks[1]}/>
+    <BookshelfListItem book={bookMocks[2]}/>
     <View style={styles.listItem}>
       <View style={{flex: 2}}>
         <Text style={styles.listFont}>Title: </Text>
@@ -29,18 +35,6 @@ export const Bookshelf = () => (
         <View style={{width: 50, height: 50, backgroundColor: 'white'}}></View>
       </View>
     </View>
-    <View style={styles.listItem}>
-      <View style={{flex: 2}}>
-        <Text style={styles.listFont}>1</Text>
-        <Text style={styles.listFont}>1</Text>
-        <Text style={styles.listFont}>1</Text>
-      </View>
-      <View style={{width: 100, height: 100, backgroundColor: 'black', flex: 1, justifyContent: 'center', alignItems: 'flex-end'}}>
-        <View style={{width: 50, height: 50, backgroundColor: 'white'}}></View>
-      </View>
-    </View>
-
-
 
     <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
       <StackBTN title='Add Book' />
@@ -62,6 +56,31 @@ const StackBTN = ({title}: {title: string}) => (
     <Text style={{color: 'white', fontSize: 14}}>{title}</Text>
   </Pressable>
 );
+
+
+const bookMocks = [
+  {
+    title: faker.company.name(),
+    author: faker.person.fullName(),
+    genre: faker.person.zodiacSign(),
+    status: faker.company.catchPhrase(),
+    cover: faker.image.url(),
+  },
+  {
+    title: faker.company.catchPhrase(),
+    author: faker.person.fullName(),
+    genre: faker.person.zodiacSign(),
+    status: faker.company.catchPhrase(),
+    cover: faker.image.url(),
+  },
+  {
+    title: faker.company.catchPhrase(),
+    author: faker.person.fullName(),
+    genre: faker.person.zodiacSign(),
+    status: faker.company.catchPhrase(),
+    cover: faker.image.url(),
+  },
+];
 
 const styles = StyleSheet.create({
   stackBtn: {
