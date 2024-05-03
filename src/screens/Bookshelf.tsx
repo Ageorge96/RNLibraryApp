@@ -1,12 +1,11 @@
 /* eslint-disable prettier/prettier */
-import {View, Text, Pressable, StyleSheet, SectionList} from 'react-native';
+import {View, Text, SectionList} from 'react-native';
 import {Button as RNButton} from '../components/Button';
-import { themePrimary } from '../theme';
-import { FlatList } from 'react-native-gesture-handler';
 import { BookshelfListItem } from '../scenes/bookshelfListItem/BookshelfListItem';
-import { faker } from '@faker-js/faker';
 import { myBooksMocks } from '../data/MockData';
-import { BookshelfBook, BookshelfSectionListProps } from '../scenes/types';
+import { Dropdown } from 'react-native-element-dropdown';
+
+
 import { StackBTN } from '../components/StackBTN';
 
 export const Bookshelf = () => (
@@ -18,8 +17,8 @@ export const Bookshelf = () => (
     <SectionList 
     ListHeaderComponent={() => (
       <View style={{alignItems: 'center', marginTop: 5}}>
-      <Text style={{color: 'black'}}>Sort</Text>
-    </View>
+        <Text style={{color: 'black'}}>Sort</Text>
+      </View>
     )}
     sections={myBooksMocks}
     renderItem={BookshelfListItem}
@@ -28,7 +27,6 @@ export const Bookshelf = () => (
     <StackBTN title='Edit Book' />
     <StackBTN title='Remove Book' />
   </View>)}
-    // stickySectionHeadersEnabled={true}
     stickyHeaderHiddenOnScroll
     />
   </>
@@ -39,27 +37,3 @@ const Button = ({title}) => (
     <RNButton title={title} />
   </View>
 );
-
-
-
-
-
-
-const styles = StyleSheet.create({
-  stackBtn: {
-    height: 40,
-    width: 10,
-    borderRadius: 25,
-    flex: 1,
-    backgroundColor: themePrimary,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  listItem: {
-    padding: 10,
-    flexDirection: 'row'
-  },
-  listFont: {
-    fontSize: 20,
-  }
-});
