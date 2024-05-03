@@ -4,7 +4,7 @@ interface BookBasic {
   cover?: string;
 }
 
-export interface BookshelfBook {
+export type BookshelfBook = {
   title: string;
   author: string;
   genre: string;
@@ -12,8 +12,12 @@ export interface BookshelfBook {
   status: string;
   bookmark?: number;
   cover?: string;
-  description?: string;
-}
+};
+
+export type BookshelfSectionListProps = {
+  title: string;
+  data: BookshelfBook[];
+}[];
 
 export interface BookmarkSceneProps extends BookBasic {
   bookmark: number;

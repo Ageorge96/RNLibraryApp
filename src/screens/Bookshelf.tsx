@@ -1,10 +1,13 @@
 /* eslint-disable prettier/prettier */
-import {View, Text, Pressable, StyleSheet} from 'react-native';
+import {View, Text, Pressable, StyleSheet, SectionList} from 'react-native';
 import {Button as RNButton} from '../components/Button';
 import { themePrimary } from '../theme';
 import { FlatList } from 'react-native-gesture-handler';
 import { BookshelfListItem } from '../scenes/bookshelfListItem/BookshelfListItem';
-import { fa, faker } from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
+import { myBooksMocks } from '../data/MockData';
+import { BookshelfBook, BookshelfSectionListProps } from '../scenes/types';
+import { StackBTN } from '../components/StackBTN';
 
 export const Bookshelf = () => (
   // Sectionlist
@@ -12,36 +15,22 @@ export const Bookshelf = () => (
   // body: list
   // footer: buttons
   <>
-  <View style={{alignItems: 'center', marginTop: 5}}>
-    <Text style={{color: 'black'}}>Sort</Text>
-  </View>
-  <View style={{justifyContent: 'flex-end', alignItems: 'baseline'}}>
-    {/* <View style={{ flexDirection: 'row', justifyContent: 'space-around'}}>
-      <Button title="Add Book" />
-      <Button title="Edit Book" />
-      <Button title="Remove Book" />
-    </View> */}
-    <BookshelfListItem book={bookMocks[0]}/>
-    <BookshelfListItem book={bookMocks[1]}/>
-    <BookshelfListItem book={bookMocks[2]}/>
-    <View style={styles.listItem}>
-      <View style={{flex: 2}}>
-        <Text style={styles.listFont}>Title: </Text>
-        <Text style={styles.listFont}>Author: </Text>
-        <Text style={styles.listFont}>Genre: </Text>
-        <Text style={styles.listFont}>Status: </Text>
-      </View>
-      <View style={{width: 100, height: 100, backgroundColor: 'black', flex: 1, justifyContent: 'center', alignItems: 'flex-end'}}>
-        <View style={{width: 50, height: 50, backgroundColor: 'white'}}></View>
-      </View>
+    <SectionList 
+    ListHeaderComponent={() => (
+      <View style={{alignItems: 'center', marginTop: 5}}>
+      <Text style={{color: 'black'}}>Sort</Text>
     </View>
-
-    <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
-      <StackBTN title='Add Book' />
-      <StackBTN title='Edit Book' />
-      <StackBTN title='Remove Book' />
-    </View>
-  </View>
+    )}
+    sections={myBooksMocks}
+    renderItem={BookshelfListItem}
+    ListFooterComponent={() => (<View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+    <StackBTN title='Add Book' />
+    <StackBTN title='Edit Book' />
+    <StackBTN title='Remove Book' />
+  </View>)}
+    // stickySectionHeadersEnabled={true}
+    stickyHeaderHiddenOnScroll
+    />
   </>
 );
 
@@ -51,36 +40,10 @@ const Button = ({title}) => (
   </View>
 );
 
-const StackBTN = ({title}: {title: string}) => (
-  <Pressable style={styles.stackBtn}>
-    <Text style={{color: 'white', fontSize: 14}}>{title}</Text>
-  </Pressable>
-);
 
 
-const bookMocks = [
-  {
-    title: faker.company.name(),
-    author: faker.person.fullName(),
-    genre: faker.person.zodiacSign(),
-    status: faker.company.catchPhrase(),
-    cover: faker.image.url(),
-  },
-  {
-    title: faker.company.catchPhrase(),
-    author: faker.person.fullName(),
-    genre: faker.person.zodiacSign(),
-    status: faker.company.catchPhrase(),
-    cover: faker.image.url(),
-  },
-  {
-    title: faker.company.catchPhrase(),
-    author: faker.person.fullName(),
-    genre: faker.person.zodiacSign(),
-    status: faker.company.catchPhrase(),
-    cover: faker.image.url(),
-  },
-];
+
+
 
 const styles = StyleSheet.create({
   stackBtn: {
