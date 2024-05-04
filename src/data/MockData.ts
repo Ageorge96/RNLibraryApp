@@ -1,3 +1,5 @@
+import {faker} from '@faker-js/faker';
+
 export const bookmarkData = [
   {
     id: 1,
@@ -21,5 +23,50 @@ export const bookmarkData = [
     author: 'Eric Nylund',
     bookmark: 111,
     cover: 'https://m.media-amazon.com/images/I/71fo5EG88xL._SY522_.jpg',
+  },
+];
+
+export const myBooksMocks = [
+  {
+    title: 'Bookshelf',
+    data: [
+      
+        {
+          title: faker.company.name(),
+          author: faker.person.fullName(),
+          genre: faker.person.zodiacSign(),
+          status: faker.company.catchPhrase(),
+          cover: faker.image.url(),
+        },
+        {
+          title: faker.company.catchPhrase(),
+          author: faker.person.fullName(),
+          genre: faker.person.zodiacSign(),
+          status: faker.company.catchPhrase(),
+          cover: faker.image.url(),
+        },
+        {
+          title: faker.company.catchPhrase(),
+          author: faker.person.fullName(),
+          genre: faker.person.zodiacSign(),
+          status: faker.company.catchPhrase(),
+          cover: faker.image.url(),
+        },
+        {
+          title: faker.company.catchPhrase(),
+          author: faker.person.fullName(),
+          genre: faker.person.zodiacSign(),
+          status: faker.company.catchPhrase(),
+          cover: faker.image.url(),
+        },
+        {
+          title: faker.company.catchPhrase(),
+          author: faker.person.fullName(),
+          genre: faker.person.zodiacSign(),
+          status: faker.company.catchPhrase(),
+          cover: faker.image.url(),
+        },
+      
+    ],
   },
 ];
