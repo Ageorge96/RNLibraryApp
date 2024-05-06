@@ -9,8 +9,7 @@ const {Navigator, Screen} = createDrawerNavigator();
 export const DrawerNavigator = () => (
   <Navigator
     initialRouteName="Home"
-    drawerContent={(props) => <DrawerCustomerView {...props} username='Bill'/>}
-    // change opacity to another color
+    drawerContent={props => <DrawerCustomerView {...props} />}
     screenOptions={{
       drawerStyle: {backgroundColor: themePrimary},
       drawerLabelStyle: {color: 'white', fontSize: 18},
