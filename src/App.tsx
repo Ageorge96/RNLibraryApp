@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import {SafeAreaView, View} from 'react-native';
 
@@ -17,6 +18,13 @@ export const App = (): React.JSX.Element => {
     </>
   );
 }
+
+
+
+
+
+
+
 
 // export default App;
 

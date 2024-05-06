@@ -1,24 +1,22 @@
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Bookshelf} from '../screens/Bookshelf';
 import {Home} from '../screens/Home';
 import { themePrimary } from '../theme';
+import { DrawerCustomerView } from './DrawerCustomerView';
 
 const {Navigator, Screen} = createDrawerNavigator();
-const Tab = createBottomTabNavigator();
 
 export const DrawerNavigator = () => (
   <Navigator
     initialRouteName="Home"
+    drawerContent={props => <DrawerCustomerView {...props} />}
     screenOptions={{
       drawerStyle: {backgroundColor: themePrimary},
-      drawerLabelStyle: {color: 'white'},
+      drawerLabelStyle: {color: 'white', fontSize: 18},
     }}>
     <Screen name="Home" component={Home} />
     <Screen name="Bookshelf" component={Bookshelf} />
+    <Screen name="Wishlist" component={Bookshelf} />
+    <Screen name="Profile" component={Bookshelf} />
   </Navigator>
-  // <Tab.Navigator>
-  //   <Tab.Screen name="Home" component={Home} />
-  //   <Tab.Screen name="Bookshelf" component={Bookshelf} />
-  // </Tab.Navigator>
 );

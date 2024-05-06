@@ -12,13 +12,13 @@ export const BookmarkScene = ({
 }: BookmarkSceneProps) => {
   return (
     <View style={styles.bookmarkScene}>
-      <View style={styles.content}>
+      <View style={styles.bmSContent}>
         {/* cap string length */}
-        <Text style={styles.title} numberOfLines={2} ellipsizeMode="tail">
+        <Text style={styles.bmSText} numberOfLines={2} ellipsizeMode="tail">
           Title: {title}
         </Text>
-        <Text style={styles.title}>Author: {author}</Text>
-        <Text style={styles.title}>Bookmark: {bookmark}</Text>
+        <Text style={styles.bmSText}>Author: {author}</Text>
+        <Text style={styles.bmSText}>Bookmark: {bookmark}</Text>
       </View>
       <View style={{flex: 7}}>
         <Cover cover={cover} />

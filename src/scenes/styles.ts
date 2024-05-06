@@ -1,5 +1,8 @@
 import { StyleSheet } from "react-native";
 import { themePrimary } from "../theme";
+import { Bookshelf } from "../screens/Bookshelf";
+
+// bmS = BookmarkScene
 
 export const styles = StyleSheet.create({
   bookmarkScene: {
@@ -12,18 +15,26 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-around',
     overflow: 'hidden',
   },
-  title: {
+  bmSText: {
     fontSize: 12,
     fontWeight: 'bold',
     color: 'white',
     flex: 1,
   },
-  content: {
+  bmSContent: {
     flex: 8,
     flexDirection: 'column',
     alignItems: 'flex-start',
     justifyContent: 'center',
     paddingTop: 15,
     paddingLeft: 15,
+  },
+  BookshelfListItem: {
+    padding: 10,
+    flexDirection: 'row',
+  },
+  listFont: {
+    fontSize: 18,
+    color: 'black',
   },
 });
