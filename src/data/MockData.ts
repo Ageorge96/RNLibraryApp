@@ -1,4 +1,5 @@
 import {faker} from '@faker-js/faker';
+import { CompleteBook } from './types';
 
 export const bookmarkData = [
   {
@@ -68,5 +69,56 @@ export const myBooksMocks = [
         },
       
     ],
+  },
+];
+
+export const completeBookMockData: CompleteBook[] = [
+  {
+    id: faker.number.int(),
+    title: faker.company.catchPhrase(),
+    author: faker.person.fullName(),
+    genre: faker.person.zodiacSign(),
+    status: faker.company.catchPhrase(),
+    cover: faker.image.url(),
+    pages: faker.number.int({max: 9999}),
+    Rating: faker.number.int({min: 0, max: 5}),
+    description: faker.lorem.paragraph({min: 1, max: 3}),
+    price: faker.commerce.price({max: 99, dec: 2, symbol: '£'}),
+  },
+  {
+    id: faker.number.int(),
+    title: faker.company.catchPhrase(),
+    author: faker.person.fullName(),
+    genre: faker.person.zodiacSign(),
+    status: faker.company.catchPhrase(),
+    cover: faker.image.url(),
+    pages: faker.number.int({max: 9999}),
+    Rating: faker.number.int({min: 0, max: 5}),
+    description: faker.lorem.paragraph({min: 1, max: 3}),
+    price: faker.commerce.price({max: 99, dec: 2, symbol: '£'}),
+  },
+  {
+    id: faker.number.int(),
+    title: faker.company.catchPhrase(),
+    author: faker.person.fullName(),
+    genre: faker.person.zodiacSign(),
+    status: faker.company.catchPhrase(),
+    cover: faker.image.url(),
+    pages: faker.number.int({max: 9999}),
+    Rating: faker.number.int({min: 0, max: 5}),
+    description: faker.lorem.paragraph({min: 1, max: 3}),
+    price: faker.commerce.price({max: 99, dec: 2, symbol: '£'}),
+  },
+  {
+    id: faker.number.int(),
+    title: faker.company.catchPhrase(),
+    author: faker.person.fullName(),
+    genre: faker.person.zodiacSign(),
+    status: faker.company.catchPhrase(),
+    cover: faker.image.url(),
+    pages: faker.number.int({max: 9999}),
+    Rating: faker.number.int({min: 0, max: 5}),
+    description: faker.lorem.paragraph({min: 1, max: 3}),
+    price: faker.commerce.price({max: 99, dec: 2, symbol: '£'}),
   },
 ];
