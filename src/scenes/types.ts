@@ -9,7 +9,7 @@ export type BookshelfBook = {
   author: string;
   genre: string;
   pages?: number;
-  status: string;
+  status?: string;
   bookmark?: number;
   cover?: string;
 };
