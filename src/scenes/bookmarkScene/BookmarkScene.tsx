@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import {styles} from '../styles';
-import {Cover} from '../../components/Cover';
+import { Cover } from '@components/Cover';
 import {BookmarkSceneProps} from '../types';
 
 export const BookmarkScene = ({

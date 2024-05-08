@@ -3,8 +3,6 @@ import {
   DrawerItemList,
 } from '@react-navigation/drawer';
 import {View, Text, Image} from 'react-native';
-import {themePrimary} from '../theme';
-import {backgroundPrimary, themeSecondary} from '../theme/Theme';
 import {styles} from './styles';
 
 export const DrawerCustomerView = props => (

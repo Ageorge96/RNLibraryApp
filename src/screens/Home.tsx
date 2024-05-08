@@ -7,11 +7,8 @@ import {
   View,
 } from 'react-native';
 import {themePrimary} from '../theme';
-import * as cover from '../assets/cover.png';
-import {BookmarkScene} from '../scenes/bookmarkScene/BookmarkScene';
-import {ScrollView} from 'react-native-gesture-handler';
-import { BookmarkItem } from '../scenes/bookmarkScene/BookmarkItem';
-import { bookmarkData } from '../data/MockData';
+import { BookmarkItem } from '@src/scenes/bookmarkScene/BookmarkItem';
+import { bookmarkData } from '@src/data/MockData';
 
 export const Home = () => (
   <>

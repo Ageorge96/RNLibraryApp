@@ -9,7 +9,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import {Navigation} from './navigation/Navigator';
+import {Navigation} from '@src/navigation/Navigator';
 
 export const App = (): React.JSX.Element => {
   return (

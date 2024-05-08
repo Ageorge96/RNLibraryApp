@@ -1,7 +1,7 @@
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import {Bookshelf} from '../screens/Bookshelf';
-import {Home} from '../screens/Home';
-import { themePrimary } from '../theme';
+import {Bookshelf} from '@src/screens/Bookshelf';
+import {Home} from '@src/screens/Home';
+import { themePrimary } from '@src/theme';
 import { DrawerCustomerView } from './DrawerCustomerView';
 
 const {Navigator, Screen} = createDrawerNavigator();

@@ -1,12 +1,11 @@
 /* eslint-disable prettier/prettier */
 import {View, Text, SectionList} from 'react-native';
-import {Button as RNButton} from '../components/Button';
-import { BookshelfListItem } from '../scenes/bookshelfListItem/BookshelfListItem';
-import { myBooksMocks } from '../data/MockData';
+import { BookshelfListItem } from '@src/scenes/bookshelfListItem/BookshelfListItem';
+import { myBooksMocks } from '@src/data/MockData';
 import { Dropdown } from 'react-native-element-dropdown';
 
 
-import { StackBTN } from '../components/StackBTN';
+import { StackBTN } from '@components/StackBTN';
 
 export const Bookshelf = () => (
   // Sectionlist
@@ -32,8 +31,3 @@ export const Bookshelf = () => (
   </>
 );
 
-const Button = ({title}) => (
-  <View style={{borderRadius: 25, overflow: 'hidden', flex: 1, backgroundColor: 'blue'}}>
-    <RNButton title={title} />
-  </View>
-);
