@@ -15,5 +15,4 @@ generate({
   configPath: path.resolve(__dirname, './.storybook'),
 });
 
-console.log("dirname" + __dirname);
 module.exports = mergeConfig(getDefaultConfig(__dirname), config);
