@@ -14,7 +14,7 @@ export const BookmarkScene = ({
     <View style={styles.bookmarkScene}>
       <View style={styles.bmSContent}>
         {/* cap string length */}
-        <Text style={styles.bmSText} numberOfLines={2} ellipsizeMode="tail">
+        <Text style={styles.bmSText} numberOfLines={2} ellipsizeMode="tail" testID='title-text'>
           Title: {title}
         </Text>
         <Text style={styles.bmSText}>Author: {author}</Text>
