@@ -27,3 +27,9 @@ export interface BookshelfListItemProps extends BookBasic {
   genre: string;
   status: string;
 }
+
+export interface HomeSceneProps extends BookBasic {
+  bookmark?: number;
+  rating?: number;
+  price?: string;
+}
