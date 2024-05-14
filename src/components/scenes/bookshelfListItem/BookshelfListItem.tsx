@@ -1,7 +1,7 @@
 import {View, Text} from 'react-native';
 import {styles} from '../styles';
 import {BookshelfBook} from '../types';
-import {Cover} from '../../components/Cover';
+import {Cover} from '../../Cover';
 import {BookshelfListing} from './BookshelfListing';
 
 export const BookshelfListItem = ({

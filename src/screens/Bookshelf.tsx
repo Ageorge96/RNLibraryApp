@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import {View, Text, SectionList} from 'react-native';
-import { BookshelfListItem } from '@src/scenes/bookshelfListItem/BookshelfListItem';
+import { BookshelfListItem } from '@components/scenes/bookshelfListItem/BookshelfListItem';
 import { StackBTN } from '@components/StackBTN';
 import { useBookshelfReducer } from '@src/reducer/useBookshelfReducer';
 
