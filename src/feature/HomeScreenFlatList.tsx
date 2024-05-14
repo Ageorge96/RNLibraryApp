@@ -1,8 +1,6 @@
-import { HomeListItemScene } from "@src/scenes/bookmarkScene/HomeListItemScene";
-import { HomeSceneProps } from "@src/scenes/types";
-import { FlatList } from "react-native";
-import { HomeListItem } from "./HomeListItem";
-
+import {HomeSceneProps} from '@src/scenes/types';
+import {FlatList} from 'react-native';
+import {HomeListItem} from './HomeListItem';
 
 export const HomeScreenFlatList = ({data}: {data: HomeSceneProps[]}) => (
   <FlatList

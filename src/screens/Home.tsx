@@ -1,18 +1,7 @@
-import {
-  FlatList,
-  Image,
-  SectionList,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
-import {themePrimary} from '../theme';
-import { BookmarkItem } from '@src/scenes/bookmarkScene/BookmarkItem';
-import { bookmarkData, wishlistData } from '@src/data/MockData';
-import { styles } from './styles';
-import { styles as tempstyle } from '../scenes/styles';
-import { HomeListItemScene } from '@src/scenes/bookmarkScene/HomeListItemScene';
-import { HomeScreenFlatList } from '@src/feature/HomeScreenFlatList';
+import {Text, View} from 'react-native';
+import {bookmarkData, wishlistData} from '@src/data/MockData';
+import {styles} from './styles';
+import {HomeScreenFlatList} from '@src/feature/HomeScreenFlatList';
 
 // The same data should be able to be passed in without edit, adjustments to data should be handled within component
 export const Home = () => (
