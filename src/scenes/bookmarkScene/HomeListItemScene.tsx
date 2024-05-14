@@ -20,7 +20,7 @@ export const HomeListItemScene = ({
           Title: {title}
         </Text>
         <Text style={styles.bmSText}>Author: {author}</Text>
-        {rating && <Text style={styles.bmSText}>Author: {rating}</Text>}
+        {rating && <Text style={styles.bmSText}>Rating: {rating}</Text>}
         {bookmark ? (
           <Text style={styles.bmSText}>Bookmark: {bookmark}</Text>
         ) : (

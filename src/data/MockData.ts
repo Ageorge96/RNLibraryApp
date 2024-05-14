@@ -27,6 +27,42 @@ export const bookmarkData = [
   },
 ];
 
+export const wishlistData = [
+  {
+    id: faker.number.int(),
+    title: faker.company.catchPhrase(),
+    author: faker.person.fullName(),
+    cover: faker.image.url(),
+    rating: faker.number.int({min: 0, max: 5}),
+    price: faker.commerce.price({max: 99, dec: 2, symbol: '£'}),
+  },
+  {
+    id: faker.number.int(),
+    title: faker.company.catchPhrase(),
+    author: faker.person.fullName(),
+    cover: faker.image.url(),
+    rating: faker.number.int({min: 0, max: 5}),
+    price: faker.commerce.price({max: 99, dec: 2, symbol: '£'}),
+  },
+  {
+    id: faker.number.int(),
+    title: faker.company.catchPhrase(),
+    author: faker.person.fullName(),
+    cover: faker.image.url(),
+    rating: faker.number.int({min: 0, max: 5}),
+    price: faker.commerce.price({max: 99, dec: 2, symbol: '£'}),
+  },
+  {
+    id: faker.number.int(),
+    title: faker.company.catchPhrase(),
+    author: faker.person.fullName(),
+    cover: faker.image.url(),
+    rating: faker.number.int({min: 0, max: 5}),
+    price: faker.commerce.price({max: 99, dec: 2, symbol: '£'}),
+  },
+];
+
+// Bookshelf data
 export const myBooksMocks = [
   {
     title: 'Bookshelf',
@@ -81,7 +117,7 @@ export const completeBookMockData: CompleteBook[] = [
     status: faker.company.catchPhrase(),
     cover: faker.image.url(),
     pages: faker.number.int({max: 9999}),
-    Rating: faker.number.int({min: 0, max: 5}),
+    rating: faker.number.int({min: 0, max: 5}),
     description: faker.lorem.paragraph({min: 1, max: 3}),
     price: faker.commerce.price({max: 99, dec: 2, symbol: '£'}),
   },
@@ -93,7 +129,7 @@ export const completeBookMockData: CompleteBook[] = [
     status: faker.company.catchPhrase(),
     cover: faker.image.url(),
     pages: faker.number.int({max: 9999}),
-    Rating: faker.number.int({min: 0, max: 5}),
+    rating: faker.number.int({min: 0, max: 5}),
     description: faker.lorem.paragraph({min: 1, max: 3}),
     price: faker.commerce.price({max: 99, dec: 2, symbol: '£'}),
   },
@@ -105,7 +141,7 @@ export const completeBookMockData: CompleteBook[] = [
     status: faker.company.catchPhrase(),
     cover: faker.image.url(),
     pages: faker.number.int({max: 9999}),
-    Rating: faker.number.int({min: 0, max: 5}),
+    rating: faker.number.int({min: 0, max: 5}),
     description: faker.lorem.paragraph({min: 1, max: 3}),
     price: faker.commerce.price({max: 99, dec: 2, symbol: '£'}),
   },
@@ -117,7 +153,7 @@ export const completeBookMockData: CompleteBook[] = [
     status: faker.company.catchPhrase(),
     cover: faker.image.url(),
     pages: faker.number.int({max: 9999}),
-    Rating: faker.number.int({min: 0, max: 5}),
+    rating: faker.number.int({min: 0, max: 5}),
     description: faker.lorem.paragraph({min: 1, max: 3}),
     price: faker.commerce.price({max: 99, dec: 2, symbol: '£'}),
   },

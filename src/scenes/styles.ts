@@ -6,7 +6,7 @@ import { Bookshelf } from "../screens/Bookshelf";
 
 export const styles = StyleSheet.create({
   bookmarkScene: {
-    width: 225,
+    width: 245,
     height: 150,
     backgroundColor: themePrimary,
     borderRadius: 35,
@@ -28,6 +28,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingTop: 15,
     paddingLeft: 15,
+    paddingRight: 10,
   },
   BookshelfListItem: {
     padding: 10,

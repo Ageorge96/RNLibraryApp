@@ -7,7 +7,7 @@ export type CompleteBook = {
   status?: string;
   bookmark?: number;
   cover?: string;
-  Rating?: string | number;
+  rating?: string | number;
   description: string;
   price: string;
 };
