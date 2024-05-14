@@ -1,4 +1,4 @@
-import {HomeListItemScene} from '@components/scenes/bookmarkScene/HomeListItemScene';
+import {HomeListItemScene} from '@components/scenes/homeListItemScene/HomeListItemScene';
 import {HomeSceneProps} from '@components/scenes/types';
 
 export const HomeListItem = ({item}: {item: HomeSceneProps}) => {
