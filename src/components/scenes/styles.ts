@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { themePrimary } from "../theme";
+import { themePrimary } from "@src/theme";
 
 // bmS = BookmarkScene
 

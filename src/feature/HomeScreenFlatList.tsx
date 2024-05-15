@@ -1,4 +1,4 @@
-import {HomeSceneProps} from '@src/scenes/types';
+import {HomeSceneProps} from '@components/scenes/types';
 import {FlatList} from 'react-native';
 import {HomeListItem} from './HomeListItem';
 

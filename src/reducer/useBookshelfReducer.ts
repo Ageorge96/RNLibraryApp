@@ -1,6 +1,6 @@
 import {completeBookMockData} from '@src/data/MockData';
 import {CompleteBook} from '@src/data/types';
-import {BookshelfBook, BookshelfSectionListProps} from '@src/scenes/types';
+import {BookshelfBook, BookshelfSectionListProps} from '@components/scenes/types';
 
 export const useBookshelfReducer = (/*user's book list*/) => {
   const transformedBookshelfData: BookshelfSectionListProps = [

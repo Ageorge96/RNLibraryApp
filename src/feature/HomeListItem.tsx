@@ -1,5 +1,5 @@
-import {HomeListItemScene} from '@src/scenes/bookmarkScene/HomeListItemScene';
-import {HomeSceneProps} from '@src/scenes/types';
+import {HomeListItemScene} from '@components/scenes/homeListItemScene/HomeListItemScene';
+import {HomeSceneProps} from '@components/scenes/types';
 
 export const HomeListItem = ({item}: {item: HomeSceneProps}) => {
   const {title, author, bookmark, cover, rating, price} = item;
