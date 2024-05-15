@@ -4496,6 +4496,7 @@ __metadata:
     react: "npm:18.2.0"
     react-dom: "npm:^18.2.0"
     react-native: "npm:0.74.0"
+    react-native-config: "npm:^1.5.1"
     react-native-element-dropdown: "npm:^2.11.0"
     react-native-gesture-handler: "npm:^2.16.0"
     react-native-reanimated: "npm:^3.9.0"
@@ -10164,6 +10165,18 @@ __metadata:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 10c0/2bdb6b93fbb1820b024b496042cce405c57e2f85e777c9aabd55f9b26d145408f9f74f5934676ffdc46f3dcff656d78413a6e43968e7b3f92eea35b3052e9053
+  languageName: node
+  linkType: hard
+
+"react-native-config@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "react-native-config@npm:1.5.1"
+  peerDependencies:
+    react-native-windows: ">=0.61"
+  peerDependenciesMeta:
+    react-native-windows:
+      optional: true
+  checksum: 10c0/bde915ccc2c43df5e5a3f1df1c68495b598dc788cd0227d3b7a847b37fd6bbcf094a5cf9932816f7599132fa9e201c1d4db134f99e72565d20c30f69777d07ed
   languageName: node
   linkType: hard
 
