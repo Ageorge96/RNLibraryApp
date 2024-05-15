@@ -27,7 +27,7 @@ export const HomeListItemScene = ({
         )}
       </View>
       <View style={{flex: 7}}>
-        <Cover cover={cover} />
+        <Cover cover={cover} title={title} />
       </View>
     </View>
   );
