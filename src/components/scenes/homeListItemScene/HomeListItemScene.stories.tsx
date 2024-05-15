@@ -9,9 +9,15 @@ const HomeListItemSceneMeta: Meta<typeof HomeListItemScene> = {
   title: 'Scenes/HomeListItemScene',
   component: HomeListItemScene,
   args: {
-    title: 'Title',
     author: 'author',
     cover: faker.image.url(),
+  },
+  argTypes: {
+    title: {
+      options: ['information', 'clock', 'clock-time-nine', 'calendar'],
+      defaultValue: 'information',
+      control: { type: 'select' },
+    },
   },
   decorators: [
     Story => (
