@@ -3,6 +3,7 @@ import {View, Text, SectionList} from 'react-native';
 import { BookshelfListItem } from '@components/scenes/bookshelfListItem/BookshelfListItem';
 import { StackBTN } from '@components/StackBTN';
 import { useBookshelfReducer } from '@src/reducer/useBookshelfReducer';
+import { themePrimary } from '@src/theme';
 
 export const Bookshelf = () => {
   const {transformedBookshelfData} = useBookshelfReducer();
@@ -26,8 +27,10 @@ export const Bookshelf = () => {
       <StackBTN title='Edit Book' />
       <StackBTN title='Remove Book' />
     </View>)}
+    ItemSeparatorComponent={() => (<View style={{height: 5, backgroundColor: themePrimary}} />)}
       stickyHeaderHiddenOnScroll
       />
     </>
   );
 };
+ 
