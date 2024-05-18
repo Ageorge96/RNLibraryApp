@@ -29,9 +29,14 @@ export const styles = StyleSheet.create({
     paddingLeft: 15,
     paddingRight: 10,
   },
-  BookshelfListItem: {
+  bookshelfListItem: {
     padding: 10,
     flexDirection: 'row',
+  },
+  bookshelfTitleView: {
+    fontWeight: 'bold',
+    marginTop: 5,
+    marginHorizontal: 'auto',
   },
   listFont: {
     fontSize: 18,

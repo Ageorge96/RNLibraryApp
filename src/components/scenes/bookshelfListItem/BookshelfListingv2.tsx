@@ -9,13 +9,12 @@ export const BookshelfListingv2 = ({item}: {item: BookshelfBook}) => {
   return (
     <>
       <Text
-        style={[
-          styles.listFont,
-          {fontWeight: 'bold', marginTop: 5, marginHorizontal: 'auto'},
-        ]}>
+        style={[styles.listFont, styles.bookshelfTitleView]}
+        numberOfLines={1}
+        ellipsizeMode="tail">
         {title}
       </Text>
-      <View style={styles.BookshelfListItem}>
+      <View style={styles.bookshelfListItem}>
         <View
           style={{
             flex: 2,
@@ -35,7 +34,7 @@ export const BookshelfListingv2 = ({item}: {item: BookshelfBook}) => {
             alignItems: 'center',
           }}>
           <View style={{width: 80, height: 120, backgroundColor: 'white'}}>
-            <Cover cover={cover} />
+            <Cover cover={cover} title={title} />
           </View>
         </View>
       </View>

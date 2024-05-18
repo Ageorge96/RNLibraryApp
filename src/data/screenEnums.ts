@@ -4,3 +4,7 @@ export enum SCREENS {
   WISHLIST = 'Wishlist',
   PROFILE = 'Profile',
 }
+
+export enum Status {
+  FINISHED = 'Finished',
+}
