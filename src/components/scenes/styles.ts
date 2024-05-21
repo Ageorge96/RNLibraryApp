@@ -37,6 +37,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginTop: 5,
     marginHorizontal: 'auto',
+    paddingHorizontal: 15,
   },
   listFont: {
     fontSize: 18,

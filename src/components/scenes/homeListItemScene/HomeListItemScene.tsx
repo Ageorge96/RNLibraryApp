@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 import {styles} from '../styles';
 import {Cover} from '@components/Cover';
 import {HomeSceneProps} from '../types';
+import {Text} from '@components/Text';
 
 export const HomeListItemScene = ({
   title,
