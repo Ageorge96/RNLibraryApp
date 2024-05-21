@@ -1,7 +1,8 @@
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 import {Cover} from '@components/Cover';
 import {styles} from '../styles';
 import {BookshelfBook} from '../types';
+import {Text} from '@components/Text';
 
 export const BookshelfListingv2 = ({item}: {item: BookshelfBook}) => {
   const {title, author, genre, status, cover} = item;

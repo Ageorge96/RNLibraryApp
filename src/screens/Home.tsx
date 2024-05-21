@@ -1,7 +1,8 @@
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import {bookmarkData, wishlistData} from '@src/data/MockData';
 import {styles} from './styles';
 import {HomeScreenFlatList} from '@src/feature/HomeScreenFlatList';
+import {Text} from '@components/Text';
 
 // The same data should be able to be passed in without edit, adjustments to data should be handled within component
 export const Home = () => (
