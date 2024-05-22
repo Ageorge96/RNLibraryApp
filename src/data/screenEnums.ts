@@ -5,6 +5,14 @@ export enum SCREENS {
   PROFILE = 'Profile',
 }
 
-export enum Status {
+export enum STATUS {
   FINISHED = 'Finished',
+}
+
+export enum SORT {
+  TITLE = 'Title',
+  AUTHOR = 'Author',
+  GENRE = 'Genre',
+  STATUS = 'Status',
+  BOOKMARK = 'Bookmark',
 }

@@ -5,6 +5,7 @@ import {useState} from 'react';
 import { themePrimary } from '@src/theme';
 import { backgroundPrimary } from '@src/theme/Theme';
 import { styles } from './styles';
+import { SORT } from '@src/data/screenEnums';
 
 const itemsDummy = [
   {label: '1', value: '1'},
@@ -16,8 +17,11 @@ export const BookshelfHeader = () => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
   const [items, setItems] = useState([
-    {label: 'Apple', value: 'apple'},
-    {label: 'Banana', value: 'banana'},
+    {label: SORT.TITLE, value: SORT.TITLE},
+    {label: SORT.AUTHOR, value: SORT.AUTHOR},
+    {label: SORT.GENRE, value: SORT.GENRE},
+    {label: SORT.STATUS, value: SORT.STATUS},
+    {label: SORT.BOOKMARK, value: SORT.BOOKMARK},
   ]);
   const [sortOpen, setSortOpen] = useState(false);
   const [sortValue, setSortValue] = useState(null);
@@ -28,7 +32,12 @@ export const BookshelfHeader = () => {
 
   return (
     <View style={{backgroundColor: themePrimary, padding: 5, zIndex: 1}}>
-      <View style={{alignItems: 'center', justifyContent: 'center', flexDirection: 'row'}}>
+      <View
+        style={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'row',
+        }}>
         <Text style={{color: 'white', marginHorizontal: 8}}>Sort:</Text>
         <DropDownPicker
           open={open}
