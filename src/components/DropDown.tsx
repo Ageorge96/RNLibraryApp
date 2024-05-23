@@ -1,15 +1,9 @@
 import {useState} from 'react';
-import {styles} from '@src/feature/styles';
+import {styles} from '@src/feature/BookshelfSectionList/styles';
 import DropDownPicker from 'react-native-dropdown-picker';
+import {DropDownItems} from './types';
 
-export const DropDown = ({
-  dropDownItems,
-}: {
-  dropDownItems: {
-    placeholder: string;
-    menuItems: {label: string; value: string}[];
-  };
-}) => {
+export const DropDown = ({dropDownItems}: {dropDownItems: DropDownItems}) => {
   const {placeholder, menuItems} = dropDownItems;
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);

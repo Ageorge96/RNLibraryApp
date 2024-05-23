@@ -15,4 +15,6 @@ export enum SORT {
   GENRE = 'Genre',
   STATUS = 'Status',
   BOOKMARK = 'Bookmark',
+  ASD = 'Ascending',
+  DESC = 'Descending',
 }

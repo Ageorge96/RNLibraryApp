@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import {styles} from '../styles';
-import { Cover } from '@components/Cover';
+import {Cover} from '@components/Cover';
 import {BookmarkSceneProps} from '../types';
 import {Text} from '@components/Text';
 
@@ -14,7 +14,6 @@ export const BookmarkScene = ({
   return (
     <View style={styles.bookmarkScene}>
       <View style={styles.bmSContent}>
-        {/* cap string length */}
         <Text
           style={styles.bmSText}
           numberOfLines={2}

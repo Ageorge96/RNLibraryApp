@@ -1,11 +1,16 @@
-import { Bookshelf } from '@src/screens/Bookshelf';
 import { themePrimary } from '@src/theme';
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
+  BookshelfHeaderContainer: {
+    backgroundColor: themePrimary,
+    padding: 5,
+    zIndex: 1,
+  },
   BookshelfHeaderView: {
     alignItems: 'center',
-    marginTop: 5,
+    justifyContent: 'center',
+    flexDirection: 'row',
   },
   BookshelfSortDropdown: {
     width: 150,
