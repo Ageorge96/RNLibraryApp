@@ -3,6 +3,7 @@ import {BookshelfListItem} from '@components/scenes/bookshelfListItem/BookshelfL
 import {useBookshelfReducer} from '@src/reducer/useBookshelfReducer';
 import {themePrimary} from '@src/theme';
 import {SectionList, View, Text} from 'react-native';
+import { BookshelfHeader } from './BookshelfHeader';
 
 export const BookshelfSectionList = () => {
   const {transformedBookshelfData} = useBookshelfReducer();
@@ -13,12 +14,8 @@ export const BookshelfSectionList = () => {
     // body: list
     // footer: buttons
     <>
+      <BookshelfHeader />
       <SectionList
-        ListHeaderComponent={() => (
-          <View style={{alignItems: 'center', marginTop: 5}}>
-            <Text style={{color: 'black'}}>Sort</Text>
-          </View>
-        )}
         sections={transformedBookshelfData}
         renderItem={BookshelfListItem}
         ListFooterComponent={() => (
