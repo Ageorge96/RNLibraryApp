@@ -14,8 +14,9 @@ export const BookshelfSectionList = () => {
     // body: list
     // footer: buttons
     <>
+      <BookshelfHeader />
       <SectionList
-        ListHeaderComponent={<BookshelfHeader />}
+        // ListHeaderComponent={<BookshelfHeader />}
         sections={transformedBookshelfData}
         renderItem={BookshelfListItem}
         ListFooterComponent={() => (

@@ -1,34 +1,45 @@
 import {View} from 'react-native';
 import {Text} from '@components/Text';
-import DropDownPicker from 'react-native-dropdown-picker';
-import {useState} from 'react';
-import { themePrimary } from '@src/theme';
-import { backgroundPrimary } from '@src/theme/Theme';
-import { styles } from './styles';
-import { SORT } from '@src/data/screenEnums';
+import {themePrimary} from '@src/theme';
+import {styles} from './styles';
+import {SORT} from '@src/data/screenEnums';
+import {DropDown} from '@components/DropDown';
 
-const itemsDummy = [
-  {label: '1', value: '1'},
-  {label: 'Apple', value: 'apple'},
-  {label: 'Banana', value: 'banana'},
-];
+const sortDropDown = {
+  placeholder: 'Sorting order',
+  menuItems: [
+    {label: 'Ascending', value: 'ASD'},
+    {label: 'Descending', value: 'DESC'},
+  ],
+};
 
-export const BookshelfHeader = () => {
-  const [open, setOpen] = useState(false);
-  const [value, setValue] = useState(null);
-  const [items, setItems] = useState([
+const typeDropDown = {
+  placeholder: 'Select a type',
+  menuItems: [
     {label: SORT.TITLE, value: SORT.TITLE},
     {label: SORT.AUTHOR, value: SORT.AUTHOR},
     {label: SORT.GENRE, value: SORT.GENRE},
     {label: SORT.STATUS, value: SORT.STATUS},
     {label: SORT.BOOKMARK, value: SORT.BOOKMARK},
-  ]);
-  const [sortOpen, setSortOpen] = useState(false);
-  const [sortValue, setSortValue] = useState(null);
-  const [sortItems, setSortItems] = useState([
-    {label: 'Ascending', value: 'ASD'},
-    {label: 'Descending', value: 'DESC'},
-  ]);
+  ],
+};
+
+export const BookshelfHeader = () => {
+  // const [open, setOpen] = useState(false);
+  // const [value, setValue] = useState(null);
+  // const [items, setItems] = useState([
+  //   {label: SORT.TITLE, value: SORT.TITLE},
+  //   {label: SORT.AUTHOR, value: SORT.AUTHOR},
+  //   {label: SORT.GENRE, value: SORT.GENRE},
+  //   {label: SORT.STATUS, value: SORT.STATUS},
+  //   {label: SORT.BOOKMARK, value: SORT.BOOKMARK},
+  // ]);
+  // const [sortOpen, setSortOpen] = useState(false);
+  // const [sortValue, setSortValue] = useState(null);
+  // const [sortItems, setSortItems] = useState([
+  //   {label: 'Ascending', value: 'ASD'},
+  //   {label: 'Descending', value: 'DESC'},
+  // ]);
 
   return (
     <View style={{backgroundColor: themePrimary, padding: 5, zIndex: 1}}>
@@ -38,8 +49,12 @@ export const BookshelfHeader = () => {
           justifyContent: 'center',
           flexDirection: 'row',
         }}>
-        <Text style={{color: 'white', marginHorizontal: 8}}>Sort:</Text>
-        <DropDownPicker
+        <Text style={{color: 'white', marginHorizontal: 8, fontWeight: 'bold'}}>
+          Sort:
+        </Text>
+        <DropDown dropDownItems={typeDropDown} />
+        <DropDown dropDownItems={sortDropDown} />
+        {/* <DropDownPicker
           open={open}
           value={value}
           items={items}
@@ -52,21 +67,20 @@ export const BookshelfHeader = () => {
           textStyle={{color: 'white'}}
           arrowIconStyle={{tintColor: 'white'}}
           containerProps={{style: {width: 150, marginRight: 10}}}
-        />
-        <DropDownPicker
+        /> */}
+        {/* <DropDownPicker
           open={sortOpen}
           value={sortValue}
           items={sortItems}
           setOpen={setSortOpen}
           setValue={setSortValue}
-          setItems={setSortItems}
           placeholder="Sort order"
           style={styles.BookshelfSortDropdown}
           dropDownContainerStyle={styles.BookshelfSortDropdown}
           textStyle={{color: 'white'}}
           arrowIconStyle={{tintColor: 'white'}}
           containerProps={{style: {width: 150, marginRight: 10}}}
-        />
+        /> */}
       </View>
     </View>
   );
