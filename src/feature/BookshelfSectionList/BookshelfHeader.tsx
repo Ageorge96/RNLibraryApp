@@ -3,6 +3,7 @@ import {Text} from '@components/Text';
 import {styles} from './styles';
 import {SORT} from '@src/data/screenEnums';
 import {DropDown} from '@components/DropDown';
+import { themeSecondary } from '@src/theme/Theme';
 
 const sortDropDown = {
   placeholder: 'Sorting order',
@@ -26,7 +27,7 @@ const typeDropDown = {
 export const BookshelfHeader = () => (
   <View style={styles.BookshelfHeaderContainer}>
     <View style={styles.BookshelfHeaderView}>
-      <Text style={{color: 'white', marginHorizontal: 8, fontWeight: 'bold'}}>
+      <Text style={{color: themeSecondary, marginHorizontal: 8, fontWeight: 'bold'}}>
         Sort:
       </Text>
       <DropDown dropDownItems={typeDropDown} />

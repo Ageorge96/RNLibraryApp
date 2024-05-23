@@ -1,4 +1,5 @@
 import { themePrimary } from '@src/theme';
+import { themeSecondary } from '@src/theme/Theme';
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
@@ -15,6 +16,6 @@ export const styles = StyleSheet.create({
   BookshelfSortDropdown: {
     width: 150,
     backgroundColor: themePrimary,
-    borderColor: 'white',
+    borderColor: themeSecondary,
   },
 });
