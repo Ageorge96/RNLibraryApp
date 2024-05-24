@@ -2,7 +2,7 @@ import {View} from 'react-native';
 import {Text} from '@components/Text';
 import {styles} from './styles';
 import {SORT} from '@src/data/screenEnums';
-import {DropDown} from '@components/DropDown';
+import {DropDown} from '@components/customNative/DropDown';
 import { themeSecondary } from '@src/theme/Theme';
 
 const sortDropDown = {
