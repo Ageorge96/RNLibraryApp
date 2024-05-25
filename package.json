@@ -9,6 +9,7 @@
     "start": "react-native start",
     "storybook-generate": "sb-rn-get-stories",
     "start storybook": "ENABLE_STORYBOOK='true' react-native start",
+    "pod": "cd ios && pod install",
     "test": "jest"
   },
   "dependencies": {
