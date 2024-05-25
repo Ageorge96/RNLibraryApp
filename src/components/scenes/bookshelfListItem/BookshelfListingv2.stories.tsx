@@ -27,7 +27,7 @@ export const BookshelfListingStory: Story = {
       author: 'Brandon Sanderson',
       genre: 'Fantasy',
       status: 'Finished',
-      cover: faker.image.url(),
+      cover: 'https://www.gollancz.co.uk/wp-content/uploads/2018/07/hbg-title-9780575097360-847.jpg?w=440',
     },
   },
 };

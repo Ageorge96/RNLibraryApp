@@ -22,7 +22,7 @@ export const DropDown = ({dropDownItems}: {dropDownItems: DropDownItems}) => {
         placeholder={placeholder}
         style={styles.BookshelfSortDropdown}
         dropDownContainerStyle={styles.BookshelfSortDropdown}
-        textStyle={{color: themeSecondary}}
+        textStyle={{color: themeSecondary, fontWeight: 'bold'}}
         arrowIconStyle={{tintColor: themeSecondary}}
         containerProps={{style: {width: 150, marginRight: 10}}}
       />
