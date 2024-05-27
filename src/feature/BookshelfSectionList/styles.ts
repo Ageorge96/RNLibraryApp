@@ -1,5 +1,5 @@
 import { themePrimary } from '@src/theme';
-import { themeSecondary } from '@src/theme/Theme';
+import { backgroundPrimary, themeSecondary } from '@src/theme/Theme';
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
@@ -13,9 +13,13 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
   },
-  BookshelfSortDropdown: {
+  BookshelfDropDown: {
     width: 150,
     backgroundColor: themePrimary,
     borderColor: themeSecondary,
+  },
+  BookshelfDropDownInverse: {
+    width: 150,
+    backgroundColor: backgroundPrimary,
   },
 });
