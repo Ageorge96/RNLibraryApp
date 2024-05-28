@@ -1,40 +1,44 @@
 import {Button} from '@components/Button';
 import {Text} from '@components/Text';
-import { DropDown } from '@components/customNative/DropDown';
-import { GENRE, SORT, STATUS } from '@src/data/screenEnums';
-import { backgroundPrimary } from '@src/theme/Theme';
-import {StyleSheet, TextInput, View} from 'react-native';
+import {DropDown} from '@components/customNative/DropDown';
+import {GENRE, STATUS} from '@src/data/screenEnums';
+import {TextInput, View} from 'react-native';
+import {styles} from '@components/compoundComponents/styles';
+import {QueryField} from '@components/compoundComponents/QueryField';
+import { useState } from 'react';
 
 export const AddBook = () => {
-  
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+  const [genre, setGenre] = useState('');
+  const [status, setStatus] = useState('');
+  const [pages, setPages] = useState('');
+
   return (
     <View
       style={{
         height: '100%',
         marginLeft: 10,
         marginTop: 10,
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         flexDirection: 'column',
       }}>
-      <View style={styles.queryView}>
-        <Text>Title</Text>
-        <TextInput placeholder="Enter book title" style={styles.textField} />
-      </View>
-      <View style={styles.queryView}>
-        <Text>Author</Text>
-        <TextInput placeholder="Enter book author" style={styles.textField} />
-      </View>
+      <QueryField
+        queryProps={{title: 'Title', placeholder: 'Enter book title', state: title, handleSubmit: setTitle}}
+      />
+      <QueryField
+        queryProps={{title: 'Author', placeholder: "Enter author's name", state: title, handleSubmit: setTitle}}
+      />
       <View style={[styles.queryView, styles.dropDownView]}>
         <DropDown dropDownItems={sortDropDown} inverse={true} />
         <DropDown dropDownItems={typeDropDown} inverse={true} />
       </View>
-      <View style={styles.queryView}>
-        <Text>Pages</Text>
-        <TextInput placeholder="Enter book title" style={styles.textField} />
-      </View>
-      {/* <Text>Cover</Text>
-      <TextInput placeholder="Enter book title" style={styles.textField}/> */}
-      <Button title="Add book" handlePress={() => console.log(lis)} />
+      <QueryField
+        queryProps={{title: 'Pages', placeholder: 'Enter total pages', state: title, handleSubmit: setTitle}}
+      />
+      <Text>Cover</Text>
+      <TextInput style={styles.textField} />
+      <Button title="Add book" onPress={() => console.log(lis)} />
     </View>
   );
 };
@@ -73,11 +77,3 @@ const typeDropDown = {
 };
 
 // Once field are complete test form submission with console log
-
-const styles = StyleSheet.create({
-  queryView: {flex: 1},
-  textField: {height: 40, width: 200, borderWidth: 2, borderRadius: 10},
-  dropDownInverse: {backgroundColor: backgroundPrimary,
-    borderColor: 'black'},
-  dropDownView: {flexDirection: 'row', justifyContent: 'center', zIndex: 1},
-});

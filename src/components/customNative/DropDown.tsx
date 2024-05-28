@@ -27,6 +27,8 @@ export const DropDown = ({
         setValue={setValue}
         setItems={setItems}
         placeholder={placeholder}
+        itemSeparator={true}
+        itemSeparatorStyle={{width: '75%', marginHorizontal: 'auto'}}
         style={
           inverse ? styles.BookshelfDropDownInverse : styles.BookshelfDropDown
         }

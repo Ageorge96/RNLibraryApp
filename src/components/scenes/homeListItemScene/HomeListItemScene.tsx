@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import {styles} from '../styles';
-import {Cover} from '@components/Cover';
+import {Cover} from '@components/customNative/Cover';
 import {HomeSceneProps} from '../types';
 import {Text} from '@components/Text';
 
