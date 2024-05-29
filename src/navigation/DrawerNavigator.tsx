@@ -4,6 +4,7 @@ import {Home} from '@src/screens/Home';
 import { themePrimary } from '@src/theme';
 import { DrawerCustomerView } from './DrawerCustomerView';
 import { SCREENS } from '@src/data/screenEnums';
+import { AddBook } from '@src/screens/AddBook';
 
 const {Navigator, Screen} = createDrawerNavigator();
 
@@ -17,7 +18,7 @@ export const DrawerNavigator = () => (
     }}>
     <Screen name={SCREENS.HOME} component={Home} />
     <Screen name={SCREENS.BOOKSHELF} component={Bookshelf} />
-    <Screen name={SCREENS.WISHLIST} component={Bookshelf} />
+    <Screen name={SCREENS.WISHLIST} component={AddBook} />
     <Screen name={SCREENS.PROFILE} component={Bookshelf} />
   </Navigator>
 );

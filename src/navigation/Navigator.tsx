@@ -1,14 +1,6 @@
-import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
+import {NavigationContainer} from '@react-navigation/native';
 import {DrawerNavigator} from './DrawerNavigator';
-import { backgroundPrimary } from '@src/theme/Theme';
-
-const CustomTheme = {
-  ...DefaultTheme,
-  colors: {
-    ...DefaultTheme.colors,
-    background: backgroundPrimary,
-  },
-};
+import {CustomTheme} from '@src/navigation/theme';
 
 export const Navigation = () => (
   <NavigationContainer theme={CustomTheme}>
