@@ -5,7 +5,7 @@ import {GENRE, STATUS} from '@src/data/screenEnums';
 import {TextInput, View} from 'react-native';
 import {styles} from '@components/compoundComponents/styles';
 import {QueryField} from '@components/compoundComponents/QueryField';
-import { useState } from 'react';
+import {useState} from 'react';
 
 export const AddBook = () => {
   const [title, setTitle] = useState('');
@@ -14,31 +14,63 @@ export const AddBook = () => {
   const [status, setStatus] = useState('');
   const [pages, setPages] = useState('');
 
+  const setNum = (input: string) => {
+    const number = input.replace(/[^0-9]/g, '');
+    console.log(number);
+
+    if (number === '') {
+      return;
+    }
+    setPages(number);
+  };
+
   return (
     <View
       style={{
         height: '100%',
-        marginLeft: 10,
         marginTop: 10,
-        justifyContent: 'space-around',
+        justifyContent: 'center',
         flexDirection: 'column',
       }}>
       <QueryField
-        queryProps={{title: 'Title', placeholder: 'Enter book title', state: title, handleSubmit: setTitle}}
+        queryProps={{
+          title: 'Title',
+          placeholder: 'Enter book title',
+          handleSubmit: setTitle,
+        }}
       />
       <QueryField
-        queryProps={{title: 'Author', placeholder: "Enter author's name", state: title, handleSubmit: setTitle}}
+        queryProps={{
+          title: 'Author',
+          placeholder: "Enter author's name",
+          handleSubmit: setAuthor,
+        }}
       />
       <View style={[styles.queryView, styles.dropDownView]}>
-        <DropDown dropDownItems={sortDropDown} inverse={true} />
-        <DropDown dropDownItems={typeDropDown} inverse={true} />
+        <DropDown
+          dropDownItems={sortDropDown}
+          inverse={true}
+          handleSelect={setGenre}
+        />
+        <DropDown
+          dropDownItems={typeDropDown}
+          inverse={true}
+          handleSelect={setStatus}
+        />
       </View>
       <QueryField
-        queryProps={{title: 'Pages', placeholder: 'Enter total pages', state: title, handleSubmit: setTitle}}
+        queryProps={{
+          title: 'Pages',
+          placeholder: 'Enter total pages',
+          handleSubmit: setNum,
+        }}
       />
       <Text>Cover</Text>
       <TextInput style={styles.textField} />
-      <Button title="Add book" onPress={() => console.log(lis)} />
+      <Button
+        title="Add book"
+        onPress={() => console.log(title + ', ' + author + ', ' + pages)}
+      />
     </View>
   );
 };

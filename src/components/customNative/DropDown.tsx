@@ -8,9 +8,11 @@ import {StyleProp} from 'react-native';
 export const DropDown = ({
   dropDownItems,
   inverse,
+  handleSelect,
 }: {
   dropDownItems: DropDownItems;
   inverse?: boolean;
+  handleSelect: Function;
 }) => {
   const {placeholder, menuItems} = dropDownItems;
   const [open, setOpen] = useState(false);
@@ -26,6 +28,7 @@ export const DropDown = ({
         setOpen={setOpen}
         setValue={setValue}
         setItems={setItems}
+        onChangeValue={selectedItem => {handleSelect(selectedItem)}}
         placeholder={placeholder}
         itemSeparator={true}
         itemSeparatorStyle={{width: '75%', marginHorizontal: 'auto'}}
