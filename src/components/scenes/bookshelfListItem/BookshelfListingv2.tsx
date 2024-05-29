@@ -1,5 +1,5 @@
 import {View} from 'react-native';
-import {Cover} from '@components/Cover';
+import {Cover} from '@components/customNative/Cover';
 import {styles} from '../styles';
 import {BookshelfBook} from '../types';
 import {Text} from '@components/Text';

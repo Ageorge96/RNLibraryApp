@@ -1,7 +1,8 @@
+import { themePrimary } from "@src/theme";
 import { Button as RNBtn } from "react-native";
 
-export const Button = ({title, theme='#800020', handlePress}) => (
+export const Button = ({title, theme=themePrimary, onPress}) => (
   <>
-    <RNBtn title={title} onPress={handlePress} color={theme}/>
+    <RNBtn title={title} onPress={onPress} color={theme}/>
   </>
 );
