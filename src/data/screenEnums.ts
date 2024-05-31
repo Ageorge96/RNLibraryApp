@@ -3,6 +3,8 @@ export enum SCREENS {
   BOOKSHELF = 'Bookshelf',
   WISHLIST = 'Wishlist',
   PROFILE = 'Profile',
+  ADDBOOK = 'Add Book',
+  BSSTACK = 'Bookshelf Stack',
 }
 
 export enum STATUS {
