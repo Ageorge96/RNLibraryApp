@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {styles} from '@src/feature/BookshelfSectionList/styles';
 import DropDownPicker from 'react-native-dropdown-picker';
-import {DropDownItems} from '../types';
+import {DropDownItems} from '../../types';
 import {themeSecondary} from '@src/theme/Theme';
 import {StyleProp} from 'react-native';
 
