@@ -1,6 +1,6 @@
 import {Button} from '@components/Button';
 import {Text} from '@components/Text';
-import {DropDown} from '@components/customNative/DropDown';
+import {DropDown} from '@components/customNative/DropDown/DropDown';
 import {GENRE, STATUS} from '@src/data/screenEnums';
 import {TextInput, View} from 'react-native';
 import {styles} from '@components/compoundComponents/styles';
