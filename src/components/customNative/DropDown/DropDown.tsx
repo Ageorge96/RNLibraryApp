@@ -47,6 +47,7 @@ export const DropDown = ({
           inverse ? {tintColor: 'black'} : {tintColor: themeSecondary}
         }
         containerProps={{style: {width: 150, marginRight: 10}}}
+        testID='dropDown'
       />
     </>
   );

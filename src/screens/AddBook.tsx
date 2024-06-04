@@ -49,13 +49,13 @@ export const AddBook = () => {
       <View style={[styles.queryView, styles.dropDownView]}>
         <DropDown
           dropDownItems={sortDropDown}
-          inverse={true}
           handleSelect={setGenre}
+          inverse
         />
         <DropDown
           dropDownItems={typeDropDown}
-          inverse={true}
           handleSelect={setStatus}
+          inverse
         />
       </View>
       <QueryField
