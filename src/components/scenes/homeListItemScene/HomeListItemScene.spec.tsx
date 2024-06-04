@@ -2,7 +2,7 @@ import {render, screen} from '@testing-library/react-native';
 import {HomeListItemScene} from './HomeListItemScene';
 import React from 'react';
 
-describe('HomeListItemScene component render', () => {
+describe('HomeListItemScene component render tests', () => {
   it('renders the title of a book', () => {
     render(<HomeListItemScene title="test-title" author="test-author" />);
     screen.getByText('Title: test-title');

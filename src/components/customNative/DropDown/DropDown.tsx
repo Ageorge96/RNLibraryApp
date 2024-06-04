@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {styles} from '@src/feature/BookshelfSectionList/styles';
 import DropDownPicker from 'react-native-dropdown-picker';
-import {DropDownItems} from '../types';
+import {DropDownItems} from '../../types';
 import {themeSecondary} from '@src/theme/Theme';
 import {StyleProp} from 'react-native';
 
@@ -47,6 +47,7 @@ export const DropDown = ({
           inverse ? {tintColor: 'black'} : {tintColor: themeSecondary}
         }
         containerProps={{style: {width: 150, marginRight: 10}}}
+        testID='dropDown'
       />
     </>
   );
