@@ -1,7 +1,7 @@
 import {Text} from '@components/Text';
 import {Cover} from '@components/customNative/Cover';
 import {faker} from '@faker-js/faker';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Button, StyleSheet, View, Image, FlatList} from 'react-native';
 import Animated, {
   useAnimatedStyle,
@@ -56,7 +56,7 @@ const ChildrenScroller = ({
   const offset = useSharedValue(0);
   const coeff = useSharedValue(reverse ? 1 : -1);
 
-  React.useEffect(() => {
+  useEffect(() => {
     coeff.value = reverse ? 1 : -1;
   }, [reverse]);
 
@@ -82,8 +82,8 @@ const ChildrenScroller = ({
 };
 
 const Marquee = ({duration = 12000, reverse = false, children}) => {
-  const [parentWidth, setParentWidth] = React.useState(0);
-  const [childrenWidth, setChildrenWidth] = React.useState(0);
+  const [parentWidth, setParentWidth] = useState(0);
+  const [childrenWidth, setChildrenWidth] = useState(0);
 
   return (
     <View
@@ -121,11 +121,9 @@ export const DummyScreen = () => {
       <View style={styles.safeArea}>
         <Button onPress={() => setReverse(v => !v)} title="Reverse" />
         <Marquee reverse={reverse}>
-          <View style={{flexDirection: 'row'}}>
-            {CoverList.map((cover, index)=> (
-              <View
-                style={{width: 120, height: 250, marginLeft: 5}}
-                key={index}>
+          <View style={styles.carouselDirection}>
+            {CoverList.map((cover, index) => (
+              <View style={styles.childView } key={index}>
                 <Cover cover={cover} title="d" />
               </View>
             ))}
@@ -136,22 +134,10 @@ export const DummyScreen = () => {
   );
 };
 
-const covers = [
-  faker.image.url(),
-  faker.image.url(),
-  faker.image.url(),
-  faker.image.url(),
-];
-
 const styles = StyleSheet.create({
-  horseImage: {
-    width: 140,
-    height: 80,
-    marginRight: 80,
-  },
   container: {
     flex: 1,
-    width: '100%',
+    marginTop: 5,
   },
   safeArea: {
     display: 'flex',
@@ -162,14 +148,10 @@ const styles = StyleSheet.create({
   animatedStyle: {
     position: 'absolute',
   },
-  circle: {
-    marginTop: 4,
-    borderRadius: 100,
-    height: 120,
-    width: 160,
-    backgroundColor: '#b58df1',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+  childView: {
+    width: 120,
+    height: 250,
+    marginLeft: 5,
   },
+  carouselDirection: {flexDirection: 'row'},
 });
