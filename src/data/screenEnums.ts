@@ -7,6 +7,11 @@ export enum SCREENS {
   BSSTACK = 'Bookshelf Stack',
 }
 
+export enum NAVIGATORS {
+  DRAWER = 'Drawer Navigator',
+  BSSTACK = 'Bookshelf Stack',
+}
+
 export enum STATUS {
   FINISHED = 'Finished',
   READY = 'Ready to start',
