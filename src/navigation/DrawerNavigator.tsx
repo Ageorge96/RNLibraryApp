@@ -1,24 +1,22 @@
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {Bookshelf} from '@src/screens/Bookshelf';
 import {Home} from '@src/screens/Home';
-import { themePrimary } from '@src/theme';
-import { DrawerCustomerView } from './DrawerCustomerView';
-import { SCREENS } from '@src/data/screenEnums';
-import { AddBook } from '@src/screens/AddBook';
-import { StackNavigator } from './StackNavigator';
+import {DrawerCustomerView} from './DrawerCustomerView';
+import {SCREENS} from '@src/data/screenEnums';
+import {styles} from './styles';
 
 const {Navigator, Screen} = createDrawerNavigator();
 
 export const DrawerNavigator = () => (
   <Navigator
-    initialRouteName="Home"
+    initialRouteName={SCREENS.HOME}
     drawerContent={props => <DrawerCustomerView {...props} />}
     screenOptions={{
-      drawerStyle: {backgroundColor: themePrimary},
-      drawerLabelStyle: {color: 'white', fontSize: 18},
+      drawerStyle: styles.drawerStyle,
+      drawerLabelStyle: styles.drawerLabelStyle,
     }}>
     <Screen name={SCREENS.HOME} component={Home} />
-    <Screen name={SCREENS.BOOKSHELF} component={StackNavigator} />
+    <Screen name={SCREENS.BOOKSHELF} component={Bookshelf} />
     <Screen name={SCREENS.WISHLIST} component={Bookshelf} />
     <Screen name={SCREENS.PROFILE} component={Bookshelf} />
   </Navigator>
