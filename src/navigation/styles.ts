@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {themeSecondary} from '../theme/Theme';
+import {themePrimary, themeSecondary} from '../theme/Theme';
 
 export const styles = StyleSheet.create({
   drawerHeader: {
@@ -17,5 +17,12 @@ export const styles = StyleSheet.create({
   drawerHeaderContentContainer: {
     flex: 2,
     justifyContent: 'center',
-  }
+  },
+  drawerStyle: {
+    backgroundColor: themePrimary,
+  },
+  drawerLabelStyle: {
+    color: 'white',
+    fontSize: 18,
+  },
 });

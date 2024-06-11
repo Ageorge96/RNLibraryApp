@@ -6,10 +6,10 @@ import {AddBook} from '@src/screens/AddBook';
 const {Navigator, Group, Screen} = createStackNavigator();
 export const RootStack = () => (
   <Navigator>
-    <Group screenOptions={{
+    <Group
+      screenOptions={{
         headerShown: false,
-      }}
-    >
+      }}>
       <Screen name={NAVIGATORS.DRAWER} component={DrawerNavigator} />
     </Group>
     <Group
@@ -17,7 +17,11 @@ export const RootStack = () => (
         headerShown: false,
         presentation: 'modal',
       }}>
-      <Screen name={SCREENS.ADDBOOK} component={AddBook} />
+      <Screen
+        name={SCREENS.ADDBOOK}
+        component={AddBook}
+        options={{headerShown: true}}
+      />
     </Group>
   </Navigator>
 );
