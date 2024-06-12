@@ -45,10 +45,3 @@ export const Home = () => (
     <DummyScreen />
   </>
 );
-
-const covers = [
-  faker.image.url(),
-  faker.image.url(),
-  faker.image.url(),
-  faker.image.url(),
-];
