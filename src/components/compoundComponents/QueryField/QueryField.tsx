@@ -1,7 +1,7 @@
 import { Text } from "@components/Text";
 import { TextInput, View } from "react-native";
-import { styles } from "./styles";
-import { queryProps } from "./types";
+import { styles } from "../styles";
+import { queryProps } from "../types";
 
 
 export const QueryField = ({queryProps}: {queryProps: queryProps}) => {
