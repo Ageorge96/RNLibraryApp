@@ -7,6 +7,18 @@ import {GENRE, STATUS} from '@src/data/screenEnums';
 import {Controller, useForm} from 'react-hook-form';
 import {StyleSheet, TextInput, View} from 'react-native';
 import {Button} from '@components/Button';
+import {QueryFieldController} from '@components/compoundComponents/QueryField/QueryFieldController';
+
+const formProps = {
+  title: {
+    title: 'Title',
+    placeholder: 'Enter title',
+  },
+  author: {
+    title: 'Author',
+    placeholder: "Enter author's name",
+  },
+};
 
 export const AddBookForm = () => {
   const {control, handleSubmit} = useForm();
@@ -21,7 +33,17 @@ export const AddBookForm = () => {
         justifyContent: 'space-evenly',
         marginHorizontal: 10,
       }}>
-      <View style={localStyles.sectionView}>
+      <QueryFieldController
+        control={control}
+        name="title"
+        queryProps={formProps.title}
+      />
+      <QueryFieldController
+        control={control}
+        name="author"
+        queryProps={formProps.author}
+      />
+      {/* <View style={localStyles.sectionView}>
         <Controller
           control={control}
           render={({field: {onChange, value}}) => {
@@ -51,7 +73,7 @@ export const AddBookForm = () => {
           }}
           name="author"
         />
-      </View>
+      </View> */}
       <View style={styles.dropDownView}>
         <Controller
           control={control}

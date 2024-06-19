@@ -3,7 +3,7 @@ import {TextInput, View, TextInputProps} from 'react-native';
 import {styles} from '../styles';
 import {queryProps} from '../types';
 
-export type QueryFieldProps = TextInputProps & {queryProps: queryProps};
+type QueryFieldProps = TextInputProps & {queryProps: queryProps};
 
 export const QueryField: React.FC<QueryFieldProps> = ({
   queryProps,
