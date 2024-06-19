@@ -1,11 +1,18 @@
-import { Text } from "@components/Text";
-import { TextInput, View } from "react-native";
-import { styles } from "../styles";
-import { queryProps } from "../types";
+import {Text} from '@components/Text';
+import {TextInput, View, TextInputProps} from 'react-native';
+import {styles} from '../styles';
+import {queryProps} from '../types';
 
+export type QueryFieldProps = TextInputProps & {queryProps: queryProps};
 
-export const QueryField = ({queryProps}: {queryProps: queryProps}) => {
-  const {title, placeholder, handleSubmit} = queryProps;
+export const QueryField: React.FC<QueryFieldProps> = ({
+  queryProps,
+  onChangeText,
+}: {
+  queryProps: queryProps;
+  onChangeText?: ((text: string) => void) | undefined;
+}) => {
+  const {title, placeholder} = queryProps;
 
   return (
     <View style={styles.queryView}>
@@ -13,7 +20,7 @@ export const QueryField = ({queryProps}: {queryProps: queryProps}) => {
       <TextInput
         placeholder={placeholder}
         style={styles.textField}
-        onChangeText={input => handleSubmit(input)}
+        onChangeText={onChangeText ? input => onChangeText(input) : undefined}
       />
     </View>
   );

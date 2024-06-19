@@ -6,7 +6,7 @@ import {DropDown} from '@components/customNative/DropDown/DropDown';
 import {GENRE, STATUS} from '@src/data/screenEnums';
 import {Controller, useForm} from 'react-hook-form';
 import {StyleSheet, TextInput, View} from 'react-native';
-import { Button } from '@components/Button';
+import {Button} from '@components/Button';
 
 export const AddBookForm = () => {
   const {control, handleSubmit} = useForm();
@@ -28,10 +28,11 @@ export const AddBookForm = () => {
             const queryProps: queryProps = {
               title: 'Title',
               placeholder: 'Enter title',
-              handleSubmit: onChange,
             };
 
-            return <QueryField queryProps={queryProps} />;
+            return (
+              <QueryField queryProps={queryProps} onChangeText={onChange} />
+            );
           }}
           name="author"
         />
@@ -43,9 +44,10 @@ export const AddBookForm = () => {
             const queryProps: queryProps = {
               title: 'Author',
               placeholder: "Enter author's name",
-              handleSubmit: onChange,
             };
-            return <QueryField queryProps={queryProps} />;
+            return (
+              <QueryField queryProps={queryProps} onChangeText={onChange} />
+            );
           }}
           name="author"
         />
@@ -82,12 +84,12 @@ export const AddBookForm = () => {
               const queryProps: queryProps = {
                 title: 'Pages',
                 placeholder: '00',
-                handleSubmit: onChange,
               };
 
               return (
-              <QueryField queryProps={queryProps}/>
-            )}}
+                <QueryField queryProps={queryProps} onChangeText={onChange} />
+              );
+            }}
             name="pages"
           />
         </View>
@@ -98,12 +100,12 @@ export const AddBookForm = () => {
               const queryProps: queryProps = {
                 title: 'Bookmark',
                 placeholder: '00',
-                handleSubmit: onChange,
               };
 
               return (
-                <QueryField queryProps={queryProps}/>
-            )}}
+                <QueryField queryProps={queryProps} onChangeText={onChange} />
+              );
+            }}
             name="bookmark"
           />
         </View>
