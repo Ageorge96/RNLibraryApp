@@ -1,30 +1,23 @@
 import {View} from 'react-native';
 import {QueryField} from './QueryField';
 import {Controller, ControllerProps} from 'react-hook-form';
-import {styles} from '../styles';
-import {queryProps} from '../types';
+import {styles} from '@src/feature/AddBookForm/styles';
+import {QueryProps} from '../types';
 
 type QueryFieldControllerProps = Omit<ControllerProps, 'render'> & {
-  queryProps: queryProps;
+  queryProps: QueryProps;
 };
-interface dummyProps {
-  ControllerProps: ControllerProps;
-  queryProps: queryProps;
-}
 
-export const QueryFieldController: React.FC<QueryFieldControllerProps> = ({
+export const QueryFieldController = ({
   queryProps,
   ...props
-}: QueryFieldControllerProps) => {
-  console.log(queryProps);
-  return (
-    <View style={styles.sectionView}>
-      <Controller
-        {...props}
-        render={({field: {onChange}}) => (
-          <QueryField queryProps={queryProps} onChangeText={onChange} />
-        )}
-      />
-    </View>
-  );
-};
+}: QueryFieldControllerProps) => (
+  <View style={styles.sectionView}>
+    <Controller
+      {...props}
+      render={({field: {onChange}}) => (
+        <QueryField queryProps={queryProps} onChangeText={onChange} />
+      )}
+    />
+  </View>
+);

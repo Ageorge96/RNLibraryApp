@@ -1,13 +1,14 @@
-import {Text} from '@components/Text';
 import {QueryField} from '@components/compoundComponents/QueryField/QueryField';
-import {styles} from '@components/compoundComponents/styles';
-import {queryProps} from '@components/compoundComponents/types';
+import {styles} from './styles';
+import {QueryProps} from '@components/compoundComponents/types';
 import {DropDown} from '@components/customNative/DropDown/DropDown';
 import {GENRE, STATUS} from '@src/data/screenEnums';
 import {Controller, useForm} from 'react-hook-form';
 import {StyleSheet, TextInput, View} from 'react-native';
 import {Button} from '@components/Button';
 import {QueryFieldController} from '@components/compoundComponents/QueryField/QueryFieldController';
+import { DropDownController } from '@components/customNative/DropDown/DropDownController';
+import { DropDownItems } from '@components/customNative/DropDown/types';
 
 const formProps = {
   title: {
@@ -75,27 +76,17 @@ export const AddBookForm = () => {
         />
       </View> */}
       <View style={styles.dropDownView}>
-        <Controller
+        <DropDownController
           control={control}
-          render={({field: {onChange, value}}) => (
-            <DropDown
-              dropDownItems={sortDropDown}
-              handleSelect={onChange}
-              inverse
-            />
-          )}
-          name="sort"
+          name="genre"
+          dropDownItems={sortDropDown}
+          inverse
         />
-        <Controller
+        <DropDownController
           control={control}
-          render={({field: {onChange, value}}) => (
-            <DropDown
-              dropDownItems={typeDropDown}
-              handleSelect={onChange}
-              inverse
-            />
-          )}
           name="status"
+          dropDownItems={typeDropDown}
+          inverse
         />
       </View>
       <View style={localStyles.numInputView}>
@@ -103,7 +94,7 @@ export const AddBookForm = () => {
           <Controller
             control={control}
             render={({field: {onChange, value}}) => {
-              const queryProps: queryProps = {
+              const queryProps: QueryProps = {
                 title: 'Pages',
                 placeholder: '00',
               };
@@ -119,7 +110,7 @@ export const AddBookForm = () => {
           <Controller
             control={control}
             render={({field: {onChange, value}}) => {
-              const queryProps: queryProps = {
+              const queryProps: QueryProps = {
                 title: 'Bookmark',
                 placeholder: '00',
               };

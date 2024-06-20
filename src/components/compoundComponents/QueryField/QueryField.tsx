@@ -1,15 +1,15 @@
 import {Text} from '@components/Text';
 import {TextInput, View, TextInputProps} from 'react-native';
-import {styles} from '../styles';
-import {queryProps} from '../types';
+import {styles} from './styles';
+import {QueryProps} from '../types';
 
-type QueryFieldProps = TextInputProps & {queryProps: queryProps};
+type QueryFieldProps = TextInputProps & {queryProps: QueryProps};
 
 export const QueryField: React.FC<QueryFieldProps> = ({
   queryProps,
   onChangeText,
 }: {
-  queryProps: queryProps;
+  queryProps: QueryProps;
   onChangeText?: ((text: string) => void) | undefined;
 }) => {
   const {title, placeholder} = queryProps;

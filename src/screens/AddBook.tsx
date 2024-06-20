@@ -3,7 +3,7 @@ import {Text} from '@components/Text';
 import {DropDown} from '@components/customNative/DropDown/DropDown';
 import {GENRE, STATUS} from '@src/data/screenEnums';
 import {TextInput, View} from 'react-native';
-import {styles} from '@components/compoundComponents/styles';
+import {styles} from '@src/feature/AddBookForm/styles';
 import {QueryField} from '@components/compoundComponents/QueryField/QueryField';
 import {useState} from 'react';
 import { AddBookForm } from '@src/feature/AddBookForm/AddBookForm';
