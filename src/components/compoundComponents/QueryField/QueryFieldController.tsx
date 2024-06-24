@@ -4,8 +4,12 @@ import {Controller, ControllerProps} from 'react-hook-form';
 import {styles} from '@src/feature/AddBookForm/styles';
 import {QueryProps} from '../types';
 
-type QueryFieldControllerProps = Omit<ControllerProps, 'render'> & {
+export type QueryFieldControllerProps = Pick<
+  ControllerProps,
+  'control' | 'name'
+> & {
   queryProps: QueryProps;
+  required: boolean;
 };
 
 export const QueryFieldController = ({
