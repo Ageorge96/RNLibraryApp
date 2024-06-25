@@ -9,7 +9,7 @@ import Animated, {
   useSharedValue,
 } from 'react-native-reanimated';
 import {HomeScreenFlatList} from '../HomeFlatListSection/HomeScreenFlatList';
-import {CoverList, wishlistData} from '@src/data/MockData';
+import {CoverList, wishlistData} from '@src/constants/MockData';
 
 const MeasureElement = ({onLayout, children}) => (
   <Animated.ScrollView

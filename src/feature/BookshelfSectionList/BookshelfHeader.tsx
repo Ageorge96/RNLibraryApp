@@ -1,28 +1,12 @@
 import {View} from 'react-native';
 import {Text} from '@components/Text';
 import {styles} from './styles';
-import {SORT} from '@src/data/screenEnums';
+import {SORT} from '@src/constants/screenEnums';
 import {DropDown} from '@components/customNative/DropDown/DropDown';
 import { themeSecondary } from '@src/theme/Theme';
+import { categoryDropDown, orderDropDown } from '@src/constants/DropDownMenus';
 
-const sortDropDown = {
-  placeholder: 'Sorting order',
-  menuItems: [
-    {label: SORT.ASD, value: SORT.ASD},
-    {label: SORT.DESC, value: SORT.DESC},
-  ],
-};
 
-const typeDropDown = {
-  placeholder: 'Select a type',
-  menuItems: [
-    {label: SORT.TITLE, value: SORT.TITLE},
-    {label: SORT.AUTHOR, value: SORT.AUTHOR},
-    {label: SORT.GENRE, value: SORT.GENRE},
-    {label: SORT.STATUS, value: SORT.STATUS},
-    {label: SORT.BOOKMARK, value: SORT.BOOKMARK},
-  ],
-};
 
 export const BookshelfHeader = () => (
   <View style={styles.BookshelfHeaderContainer}>
@@ -30,8 +14,8 @@ export const BookshelfHeader = () => (
       <Text style={{color: themeSecondary, marginHorizontal: 8, fontWeight: 'bold'}}>
         Sort:
       </Text>
-      <DropDown dropDownItems={typeDropDown} />
-      <DropDown dropDownItems={sortDropDown} />
+      <DropDown dropDownItems={categoryDropDown} handleSelect={() => null} />
+      <DropDown dropDownItems={orderDropDown} handleSelect={() => null} />
     </View>
   </View>
 );

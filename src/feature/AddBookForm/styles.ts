@@ -2,7 +2,6 @@ import {backgroundPrimary} from '@src/theme/Theme';
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
-  
   dropDownInverse: {backgroundColor: backgroundPrimary, borderColor: 'black'},
   dropDownView: {
     flexDirection: 'row',
