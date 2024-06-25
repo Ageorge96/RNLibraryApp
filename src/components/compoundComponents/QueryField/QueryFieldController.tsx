@@ -14,11 +14,13 @@ export type QueryFieldControllerProps = Pick<
 
 export const QueryFieldController = ({
   queryProps,
+  required,
   ...props
 }: QueryFieldControllerProps) => (
   <View style={styles.sectionView}>
     <Controller
       {...props}
+      rules={{required: required}}
       render={({field: {onChange}}) => (
         <QueryField queryProps={queryProps} onChangeText={onChange} />
       )}
