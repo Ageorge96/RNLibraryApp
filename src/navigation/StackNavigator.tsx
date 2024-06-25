@@ -1,5 +1,5 @@
 import {createStackNavigator} from '@react-navigation/stack';
-import {SCREENS} from '@src/data/screenEnums';
+import {SCREENS} from '@src/constants/screenEnums';
 import {AddBook} from '@src/screens/AddBook';
 import {Bookshelf} from '@src/screens/Bookshelf';
 

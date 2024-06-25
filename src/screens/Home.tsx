@@ -1,5 +1,5 @@
 import {Dimensions, FlatList, View} from 'react-native';
-import {bookmarkData, wishlistData} from '@src/data/MockData';
+import {bookmarkData, wishlistData} from '@src/constants/MockData';
 import {styles} from './styles';
 import {HomeScreenFlatList} from '@src/feature/HomeFlatListSection/HomeScreenFlatList';
 import {Text} from '@components/Text';

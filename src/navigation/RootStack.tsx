@@ -1,6 +1,6 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import {DrawerNavigator} from './DrawerNavigator';
-import {NAVIGATORS, SCREENS} from '@src/data/screenEnums';
+import {NAVIGATORS, SCREENS} from '@src/constants/screenEnums';
 import {AddBook} from '@src/screens/AddBook';
 
 const {Navigator, Group, Screen} = createStackNavigator();

@@ -1,7 +1,7 @@
 import {Button} from '@components/Button';
 import {Text} from '@components/Text';
 import {DropDown} from '@components/customNative/DropDown/DropDown';
-import {GENRE, STATUS} from '@src/data/screenEnums';
+import {GENRE, STATUS} from '@src/constants/screenEnums';
 import {TextInput, View} from 'react-native';
 import {styles} from '@src/feature/AddBookForm/styles';
 import {QueryField} from '@components/compoundComponents/QueryField/QueryField';

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { DropDown } from './DropDown';
-import { SORT } from '@src/data/screenEnums';
+import { SORT } from '@src/constants/screenEnums';
 import { View } from 'react-native';
 import { backgroundPrimary } from '@src/theme/Theme';
 

@@ -6,7 +6,7 @@ import {SectionList, View, Text, StyleSheet, Pressable} from 'react-native';
 import { BookshelfHeader } from './BookshelfHeader';
 import { themeSecondary } from '@src/theme/Theme';
 import { useNavigation } from '@react-navigation/native';
-import { SCREENS } from '@src/data/screenEnums';
+import { SCREENS } from '@src/constants/screenEnums';
 
 export const BookshelfSectionList = () => {
   const {transformedBookshelfData} = useBookshelfReducer();
