@@ -7,8 +7,9 @@ import {Controller, useForm} from 'react-hook-form';
 import {StyleSheet, TextInput, View} from 'react-native';
 import {Button} from '@components/Button';
 import {QueryFieldController} from '@components/compoundComponents/QueryField/QueryFieldController';
-import { DropDownController } from '@components/customNative/DropDown/DropDownController';
-import { DropDownItems } from '@components/customNative/DropDown/types';
+import {DropDownController} from '@components/customNative/DropDown/DropDownController';
+import {DropDownItems} from '@components/customNative/DropDown/types';
+import {NumberFieldController} from '@components/compoundComponents/QueryField/NumberFieldController';
 
 const formProps = {
   title: {
@@ -18,6 +19,14 @@ const formProps = {
   author: {
     title: 'Author',
     placeholder: "Enter author's name",
+  },
+  pages: {
+    title: 'Total Pages',
+    placeholder: '00',
+  },
+  bookmark: {
+    title: 'Bookmark (Optional)',
+    placeholder: '00',
   },
 };
 
@@ -37,11 +46,13 @@ export const AddBookForm = () => {
       <QueryFieldController
         control={control}
         name="title"
+        required={true}
         queryProps={formProps.title}
       />
       <QueryFieldController
         control={control}
         name="author"
+        required={true}
         queryProps={formProps.author}
       />
       {/* <View style={localStyles.sectionView}>
@@ -90,38 +101,18 @@ export const AddBookForm = () => {
         />
       </View>
       <View style={localStyles.numInputView}>
-        <View style={{flex: 1, alignItems: 'center'}}>
-          <Controller
-            control={control}
-            render={({field: {onChange, value}}) => {
-              const queryProps: QueryProps = {
-                title: 'Pages',
-                placeholder: '00',
-              };
-
-              return (
-                <QueryField queryProps={queryProps} onChangeText={onChange} />
-              );
-            }}
-            name="pages"
-          />
-        </View>
-        <View style={{width: 60, flex: 1, alignItems: 'center'}}>
-          <Controller
-            control={control}
-            render={({field: {onChange, value}}) => {
-              const queryProps: QueryProps = {
-                title: 'Bookmark',
-                placeholder: '00',
-              };
-
-              return (
-                <QueryField queryProps={queryProps} onChangeText={onChange} />
-              );
-            }}
-            name="bookmark"
-          />
-        </View>
+        <NumberFieldController
+          control={control}
+          name="pages"
+          required={false}
+          queryProps={formProps.pages}
+        />
+        <NumberFieldController
+          control={control}
+          name="bookmark"
+          required={true}
+          queryProps={formProps.bookmark}
+        />
       </View>
       <Button title="Submit" onPress={handleSubmit(onSubmit)} />
     </View>

@@ -7,7 +7,7 @@ export const NumberFieldController = ({
   queryProps,
   required,
   ...props
-}: QueryFieldControllerProps) => {
+}: QueryFieldControllerProps) => (
   <View>
     <Controller
       {...props}
@@ -16,5 +16,5 @@ export const NumberFieldController = ({
         <QueryField queryProps={queryProps} onChangeText={onChange} />
       )}
     />
-  </View>;
-};
+  </View>
+);
