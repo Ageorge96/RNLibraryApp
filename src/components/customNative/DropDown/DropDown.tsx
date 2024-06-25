@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {styles} from '@src/feature/BookshelfSectionList/styles';
 import DropDownPicker from 'react-native-dropdown-picker';
-import {DropDownItems} from '../../types';
+import {DropDownProps} from './types';
 import {themeSecondary} from '@src/theme/Theme';
 import {StyleProp} from 'react-native';
 
@@ -9,11 +9,7 @@ export const DropDown = ({
   dropDownItems,
   inverse,
   handleSelect,
-}: {
-  dropDownItems: DropDownItems;
-  inverse?: boolean;
-  handleSelect: Function;
-}) => {
+}: DropDownProps) => {
   const {placeholder, menuItems} = dropDownItems;
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
@@ -28,7 +24,9 @@ export const DropDown = ({
         setOpen={setOpen}
         setValue={setValue}
         setItems={setItems}
-        onChangeValue={selectedItem => {handleSelect(selectedItem)}}
+        onChangeValue={selectedItem => {
+          handleSelect(selectedItem);
+        }}
         placeholder={placeholder}
         itemSeparator={true}
         itemSeparatorStyle={{width: '75%', marginHorizontal: 'auto'}}

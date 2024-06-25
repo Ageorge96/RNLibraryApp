@@ -20,7 +20,7 @@ export const RootStack = () => (
       <Screen
         name={SCREENS.ADDBOOK}
         component={AddBook}
-        options={{headerShown: true}}
+        options={{headerShown: true, headerBackTitle: 'Bookshelf'}}
       />
     </Group>
   </Navigator>

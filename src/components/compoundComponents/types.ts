@@ -1,5 +1,4 @@
-export type queryProps = {
+export type QueryProps = {
   title: string;
   placeholder: string;
-  handleSubmit: Function;
 };
