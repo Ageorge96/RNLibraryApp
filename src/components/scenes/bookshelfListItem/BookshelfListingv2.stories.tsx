@@ -9,6 +9,16 @@ type Story = StoryObj<typeof BookshelfListingv2>;
 export const BookshelfListingMeta: Meta<typeof BookshelfListingv2> = {
   title: 'Scenes/BookshelfListing',
   component: BookshelfListingv2,
+  args: {
+    item: {
+      title: 'The Way of Kings: The Stormlight Archives',
+      author: 'Brandon Sanderson',
+      genre: 'Fantasy',
+      status: 'Finished',
+      cover:
+        'https://www.gollancz.co.uk/wp-content/uploads/2018/07/hbg-title-9780575097360-847.jpg?w=440',
+    },
+  },
   decorators: [
     Story => (
       <View style={{backgroundColor: backgroundPrimary, justifyContent: 'center', flex: 1}}>
