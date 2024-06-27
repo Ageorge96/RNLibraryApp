@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {styles} from '@src/feature/BookshelfSectionList/styles';
+import {styles} from './styles';
 import DropDownPicker from 'react-native-dropdown-picker';
 import {DropDownProps} from './types';
 import {themeSecondary} from '@src/theme/Theme';
@@ -29,23 +29,17 @@ export const DropDown = ({
         }}
         placeholder={placeholder}
         itemSeparator={true}
-        itemSeparatorStyle={{width: '75%', marginHorizontal: 'auto'}}
+        itemSeparatorStyle={styles.ItemSeparator}
         style={
           inverse ? styles.BookshelfDropDownInverse : styles.BookshelfDropDown
         }
         dropDownContainerStyle={
           inverse ? styles.BookshelfDropDownInverse : styles.BookshelfDropDown
         }
-        textStyle={
-          inverse
-            ? {fontWeight: 'bold'}
-            : {color: themeSecondary, fontWeight: 'bold'}
-        }
-        arrowIconStyle={
-          inverse ? {tintColor: 'black'} : {tintColor: themeSecondary}
-        }
+        textStyle={inverse ? styles.FontStyleInverse : styles.FontStyle}
+        arrowIconStyle={inverse ? styles.ArrowIconInverse : styles.ArrowIcon}
         containerProps={{style: {width: 150, marginRight: 10}}}
-        testID='dropDown'
+        testID="dropDown"
       />
     </>
   );
