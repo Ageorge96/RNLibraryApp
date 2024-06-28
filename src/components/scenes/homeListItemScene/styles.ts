@@ -1,10 +1,10 @@
-import { StyleSheet } from "react-native";
-import { themePrimary } from "@src/theme";
+import {StyleSheet} from 'react-native';
+import {themePrimary} from '@src/theme';
 
-// bmS = BookmarkScene
+// hS = BookmarkScene
 
 export const styles = StyleSheet.create({
-  bookmarkScene: {
+  homeListItemScene: {
     width: 245,
     height: 150,
     backgroundColor: themePrimary,
@@ -14,13 +14,13 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-around',
     overflow: 'hidden',
   },
-  bmSText: {
+  hSText: {
     fontSize: 12,
     fontWeight: 'bold',
     color: 'white',
     flex: 1,
   },
-  bmSContent: {
+  hSContent: {
     flex: 8,
     flexDirection: 'column',
     alignItems: 'flex-start',
@@ -28,19 +28,5 @@ export const styles = StyleSheet.create({
     paddingTop: 15,
     paddingLeft: 15,
     paddingRight: 10,
-  },
-  bookshelfListItem: {
-    padding: 10,
-    flexDirection: 'row',
-  },
-  bookshelfTitleView: {
-    fontWeight: 'bold',
-    marginTop: 5,
-    marginHorizontal: 'auto',
-    paddingHorizontal: 15,
-  },
-  listFont: {
-    fontSize: 18,
-    color: 'black',
   },
 });
