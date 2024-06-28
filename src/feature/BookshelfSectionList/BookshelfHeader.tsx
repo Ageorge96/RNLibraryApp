@@ -1,5 +1,5 @@
 import {View} from 'react-native';
-import {Text} from '@components/Text';
+import {Text} from '@components/customNative/Text/Text';
 import {styles} from './styles';
 import {SORT} from '@src/constants/screenEnums';
 import {DropDown} from '@components/customNative/DropDown/DropDown';

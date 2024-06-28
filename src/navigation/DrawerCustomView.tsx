@@ -4,7 +4,7 @@ import {
 } from '@react-navigation/drawer';
 import {View, Image} from 'react-native';
 import {styles} from './styles';
-import {Text} from '@components/Text';
+import {Text} from '@components/customNative/Text/Text';
 
 export const DrawerCustomerView = props => (
   <DrawerContentScrollView {...props}>

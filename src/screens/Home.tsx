@@ -2,7 +2,7 @@ import {Dimensions, FlatList, View} from 'react-native';
 import {bookmarkData, wishlistData} from '@src/constants/MockData';
 import {styles} from './styles';
 import {HomeScreenFlatList} from '@src/feature/HomeFlatListSection/HomeScreenFlatList';
-import {Text} from '@components/Text';
+import {Text} from '@components/customNative/Text/Text';
 // import Carousel from 'react-native-reanimated-carousel';
 import {faker} from '@faker-js/faker';
 import {V} from '@storybook/react-native/dist/View-9ba91d66';

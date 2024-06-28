@@ -3,13 +3,13 @@ import {View} from 'react-native';
 import {styles} from './styles';
 import {Cover} from '@components/customNative/Cover/Cover';
 import {HomeSceneProps} from '../types';
-import {Text} from '@components/Text';
+import {Text} from '@components/customNative/Text/Text';
 
 export const HomeListItemScene = ({
   item
 }: {item: HomeSceneProps}) => {
   const {title, author, bookmark, cover, rating, price} = item;
-  
+
   return (
     <View style={styles.homeListItemScene}>
       <View style={styles.hSContent}>
