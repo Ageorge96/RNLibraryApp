@@ -6,13 +6,10 @@ import {HomeSceneProps} from '../types';
 import {Text} from '@components/Text';
 
 export const HomeListItemScene = ({
-  title,
-  author,
-  bookmark,
-  cover,
-  rating,
-  price,
-}: HomeSceneProps) => {
+  item
+}: {item: HomeSceneProps}) => {
+  const {title, author, bookmark, cover, rating, price} = item;
+  
   return (
     <View style={styles.homeListItemScene}>
       <View style={styles.hSContent}>
