@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { BookshelfListingv2 } from './BookshelfListingv2'
+import { BookshelfListing } from './BookshelfListing'
 import { faker } from '@faker-js/faker';
 import { View } from 'react-native';
 import { backgroundPrimary } from '@src/theme/Theme';
 
-type Story = StoryObj<typeof BookshelfListingv2>;
+type Story = StoryObj<typeof BookshelfListing>;
 
-export const BookshelfListingMeta: Meta<typeof BookshelfListingv2> = {
+export const BookshelfListingMeta: Meta<typeof BookshelfListing> = {
   title: 'Scenes/BookshelfListing',
-  component: BookshelfListingv2,
+  component: BookshelfListing,
   args: {
     item: {
       title: 'The Way of Kings: The Stormlight Archives',

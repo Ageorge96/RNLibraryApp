@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import {styles} from '../styles';
-import {Cover} from '@components/customNative/Cover';
+import {Cover} from '@components/customNative/Cover/Cover';
 import {BookmarkSceneProps} from '../types';
 import {Text} from '@components/Text';
 
@@ -24,9 +24,10 @@ export const BookmarkScene = ({
         <Text style={styles.bmSText}>Author: {author}</Text>
         <Text style={styles.bmSText}>Bookmark: {bookmark}</Text>
       </View>
-      <View style={{flex: 7}}>
-        <Cover cover={cover} title={title} />
-      </View>
+      {/* <Cover cover={cover} title={title} style={{flex: 7}} /> */}
+      {/* <View style={{flex: 7}}>
+        <Cover cover={cover} title={title} style={{flex: 7}} />
+      </View> */}
     </View>
   );
 };

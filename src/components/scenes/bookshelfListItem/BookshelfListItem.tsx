@@ -1,6 +1,5 @@
 import {BookshelfBook} from '../types';
 import {BookshelfListing} from './BookshelfListing';
-import { BookshelfListingv2 } from './BookshelfListingv2';
 
 export const BookshelfListItem = ({
   item,
@@ -10,6 +9,6 @@ export const BookshelfListItem = ({
   index: number;
 }) => (
   <>
-    <BookshelfListingv2 item={item} />
+    <BookshelfListing item={item} />
   </>
 );

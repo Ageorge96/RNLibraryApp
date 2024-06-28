@@ -1,7 +1,7 @@
 import {styles} from './styles';
 import {useForm} from 'react-hook-form';
 import {StyleSheet, View} from 'react-native';
-import {Button} from '@components/Button';
+import {Button} from '@components/customNative/Button/Button';
 import {QueryFieldController} from '@components/compoundComponents/QueryField/QueryFieldController';
 import {DropDownController} from '@components/customNative/DropDown/DropDownController';
 import {NumberFieldController} from '@components/compoundComponents/QueryField/NumberFieldController';

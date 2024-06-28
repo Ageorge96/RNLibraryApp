@@ -1,5 +1,5 @@
 import {Text} from '@components/Text';
-import {Cover} from '@components/customNative/Cover';
+import {Cover} from '@components/customNative/Cover/Cover';
 import {faker} from '@faker-js/faker';
 import React, {useEffect, useState} from 'react';
 import {Button, StyleSheet, View, Image, FlatList} from 'react-native';
