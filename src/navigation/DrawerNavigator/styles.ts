@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {themePrimary, themeSecondary} from '../theme/Theme';
+import {themePrimary, themeSecondary} from '../../theme/Theme';
 
 export const styles = StyleSheet.create({
   drawerHeader: {
@@ -14,6 +14,10 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  profilePicture: {
+    width: '100%',
+    height: '100%',
+  },
   drawerHeaderContentContainer: {
     flex: 2,
     justifyContent: 'center',
@@ -24,5 +28,10 @@ export const styles = StyleSheet.create({
   drawerLabelStyle: {
     color: 'white',
     fontSize: 18,
+  },
+  drawerHeaderText: {
+    color: 'black',
+    fontSize: 18,
+    fontWeight: 'bold',
   },
 });

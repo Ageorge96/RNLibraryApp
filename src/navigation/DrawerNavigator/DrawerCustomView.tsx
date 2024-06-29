@@ -11,14 +11,12 @@ export const DrawerCustomerView = props => (
     <View style={styles.drawerHeader}>
       <View style={styles.drawerHeaderProfilePictureContainer}>
         <Image
-          style={{width: '100%', height: '100%'}}
-          source={require('../assets/ic_profile.png')}
+          style={styles.profilePicture}
+          source={require('@src/assets/ic_profile.png')}
         />
       </View>
       <View style={styles.drawerHeaderContentContainer}>
-        <Text style={{color: 'black', fontSize: 18, fontWeight: 'bold'}}>
-          Andre's Library
-        </Text>
+        <Text style={styles.drawerHeaderText}>Andre's Library</Text>
       </View>
     </View>
     <DrawerItemList {...props} />

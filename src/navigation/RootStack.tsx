@@ -1,5 +1,5 @@
 import {createStackNavigator} from '@react-navigation/stack';
-import {DrawerNavigator} from './DrawerNavigator';
+import {DrawerNavigator} from './DrawerNavigator/DrawerNavigator';
 import {NAVIGATORS, SCREENS} from '@src/constants/screenEnums';
 import {AddBook} from '@src/screens/AddBook';
 
