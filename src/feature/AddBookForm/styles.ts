@@ -2,6 +2,12 @@ import {backgroundPrimary} from '@src/theme/Theme';
 import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
+  formView: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    marginHorizontal: 10,
+  },
   dropDownInverse: {backgroundColor: backgroundPrimary, borderColor: 'black'},
   dropDownView: {
     flexDirection: 'row',

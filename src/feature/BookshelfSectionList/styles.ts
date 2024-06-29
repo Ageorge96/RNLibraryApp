@@ -1,6 +1,8 @@
+import { Bookshelf } from '@src/screens/Bookshelf';
 import { themePrimary } from '@src/theme';
 import { backgroundPrimary, themeSecondary } from '@src/theme/Theme';
 import {StyleSheet} from 'react-native';
+import { BookshelfHeader } from './BookshelfHeader';
 
 export const styles = StyleSheet.create({
   BookshelfHeaderContainer: {
@@ -13,6 +15,11 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     flexDirection: 'row',
   },
+  BookshelfHeaderText: {
+    color: themeSecondary,
+    marginHorizontal: 8,
+    fontWeight: 'bold',
+  },
   BookshelfDropDown: {
     width: 150,
     backgroundColor: themePrimary,
@@ -20,6 +27,13 @@ export const styles = StyleSheet.create({
   },
   BookshelfDropDownInverse: {
     width: 150,
+    backgroundColor: backgroundPrimary,
+  },
+  itemSeperatorComponent: {height: 5, backgroundColor: themePrimary},
+  headerStoryView: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
     backgroundColor: backgroundPrimary,
   },
 });

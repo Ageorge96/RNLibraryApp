@@ -13,13 +13,7 @@ export const AddBookForm = () => {
   const onSubmit = data => console.log(data);
 
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
-        marginHorizontal: 10,
-      }}>
+    <View style={styles.formView}>
       <QueryFieldController
         control={control}
         name="title"
