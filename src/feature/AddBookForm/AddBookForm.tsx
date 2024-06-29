@@ -1,7 +1,7 @@
 import {styles} from './styles';
 import {useForm} from 'react-hook-form';
 import {StyleSheet, View} from 'react-native';
-import {Button} from '@components/Button';
+import {Button} from '@components/customNative/Button/Button';
 import {QueryFieldController} from '@components/compoundComponents/QueryField/QueryFieldController';
 import {DropDownController} from '@components/customNative/DropDown/DropDownController';
 import {NumberFieldController} from '@components/compoundComponents/QueryField/NumberFieldController';
@@ -13,13 +13,7 @@ export const AddBookForm = () => {
   const onSubmit = data => console.log(data);
 
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
-        marginHorizontal: 10,
-      }}>
+    <View style={styles.formView}>
       <QueryFieldController
         control={control}
         name="title"

@@ -1,4 +1,3 @@
-import {StackBTN} from '@components/StackBTN';
 import {BookshelfListItem} from '@components/scenes/bookshelfListItem/BookshelfListItem';
 import {useBookshelfReducer} from '@src/reducer/useBookshelfReducer';
 import {themePrimary} from '@src/theme';
@@ -7,6 +6,7 @@ import { BookshelfHeader } from './BookshelfHeader';
 import { themeSecondary } from '@src/theme/Theme';
 import { useNavigation } from '@react-navigation/native';
 import { SCREENS } from '@src/constants/screenEnums';
+import { styles } from './styles';
 
 export const BookshelfSectionList = () => {
   const {transformedBookshelfData} = useBookshelfReducer();
@@ -35,7 +35,7 @@ export const BookshelfSectionList = () => {
         //   </View>
         // )}
         ItemSeparatorComponent={() => (
-          <View style={{height: 5, backgroundColor: themePrimary}} />
+          <View style={styles.itemSeperatorComponent} />
         )}
         stickyHeaderHiddenOnScroll
       />
@@ -47,21 +47,21 @@ export const BookshelfSectionList = () => {
           flexDirection: 'row',
           justifyContent: 'space-evenly',
         }}>
-        <Pressable style={[styles.barView, {borderEndWidth: 2}]} onPress={() => [navigation.navigate(SCREENS.ADDBOOK)]}>
-          <Text style={styles.bar}>Add Book</Text>
+        <Pressable style={[barStyles.barView, {borderEndWidth: 2}]} onPress={() => [navigation.navigate(SCREENS.ADDBOOK)]}>
+          <Text style={barStyles.bar}>Add Book</Text>
         </Pressable>
-        <Pressable style={styles.barView} onPress={() => {console.log('2')}}>
-          <Text style={styles.bar}>Edit Book</Text>
+        <Pressable style={barStyles.barView} onPress={() => {console.log('2')}}>
+          <Text style={barStyles.bar}>Edit Book</Text>
         </Pressable>
-        <Pressable style={[styles.barView, {borderStartWidth: 2}]} onPress={() => {console.log('3')}}>
-          <Text style={styles.bar}>Remove Book</Text>
+        <Pressable style={[barStyles.barView, {borderStartWidth: 2}]} onPress={() => {console.log('3')}}>
+          <Text style={barStyles.bar}>Remove Book</Text>
         </Pressable>
       </View>
     </>
   );
 };
 
-const styles = StyleSheet.create({
+const barStyles = StyleSheet.create({
   bar: {
     color: themeSecondary,
     fontSize: 18,

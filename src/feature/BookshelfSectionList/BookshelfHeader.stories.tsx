@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { BookshelfHeader } from './BookshelfHeader';
-import { View } from 'react-native';
-import { backgroundPrimary } from '@src/theme/Theme';
+import type {Meta, StoryObj} from '@storybook/react';
+import {BookshelfHeader} from './BookshelfHeader';
+import {View} from 'react-native';
+import {styles} from './styles';
 
 type Story = StoryObj<typeof BookshelfHeader>;
 
@@ -10,7 +10,7 @@ export const BookshelfHeaderMeta: Meta<typeof BookshelfHeader> = {
   component: BookshelfHeader,
   decorators: [
     Story => (
-      <View style={{justifyContent: 'center', alignItems: 'center', flex: 1, backgroundColor: backgroundPrimary}}>
+      <View style={styles.headerStoryView}>
         <Story />
       </View>
     ),

@@ -1,7 +1,7 @@
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {Bookshelf} from '@src/screens/Bookshelf';
 import {Home} from '@src/screens/Home';
-import {DrawerCustomerView} from './DrawerCustomerView';
+import {DrawerCustomerView} from './DrawerCustomView';
 import {SCREENS} from '@src/constants/screenEnums';
 import {styles} from './styles';
 

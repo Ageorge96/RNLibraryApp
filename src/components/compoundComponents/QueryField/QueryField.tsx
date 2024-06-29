@@ -1,4 +1,4 @@
-import {Text} from '@components/Text';
+import {Text} from '@components/customNative/Text/Text';
 import {TextInput, View, TextInputProps} from 'react-native';
 import {styles} from './styles';
 import {QueryProps} from '../types';

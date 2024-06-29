@@ -1,1 +1,1 @@
-export {Cover} from './customNative/Cover';
+export {Cover} from './customNative/Cover/Cover';
