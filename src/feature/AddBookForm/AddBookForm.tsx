@@ -66,6 +66,12 @@ export const AddBookForm = () => {
           queryProps={formProps.bookmark}
         />
       </View>
+      <QueryFieldController 
+        control={control}
+        name="cover"
+        required={false}
+        queryProps={formProps.cover}
+      />
       <Button title="Submit" onPress={handleSubmit(onSubmit)} />
     </View>
   );
@@ -88,4 +94,8 @@ const formProps = {
     title: 'Bookmark (Optional)',
     placeholder: '00',
   },
+  cover: {
+    title: 'Cover',
+    placeholder: 'Provide an image url'
+  }
 };
