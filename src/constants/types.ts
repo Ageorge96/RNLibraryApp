@@ -1,10 +1,12 @@
+import { GENRE, STATUS } from "./screenEnums";
+
 export type CompleteBook = {
   id: number;
   title: string;
   author: string;
-  genre: string;
+  genre: GENRE;
   pages?: number;
-  status?: string;
+  status?: STATUS;
   bookmark?: number;
   cover?: string;
   rating?: string | number;

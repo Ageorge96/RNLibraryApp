@@ -4,7 +4,7 @@ import {Navigation} from '@src/navigation/Navigator';
 import {Provider as ReduxProvider} from 'react-redux';
 import store from './feature/store/store';
 
-const styles = StyleSheet({
+const styles = StyleSheet.create({
   safeArea: {flex: 1, backgroundColor: 'black'},
 });
 

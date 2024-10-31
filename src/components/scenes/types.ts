@@ -9,7 +9,7 @@ interface BookBasic {
 export type BookshelfBook = {
   title: string;
   author: string;
-  genre: GENRE[];
+  genre: GENRE; //turn into list
   pages?: number;
   status?: STATUS;
   bookmark?: number;

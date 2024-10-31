@@ -6,11 +6,23 @@ import {QueryFieldController} from '@components/compoundComponents/QueryField/Qu
 import {DropDownController} from '@components/customNative/DropDown/DropDownController';
 import {NumberFieldController} from '@components/compoundComponents/QueryField/NumberFieldController';
 import { genreDropDownMenu, statusDropDownMenu } from '@src/constants/DropDownMenus';
+import { useDispatch } from 'react-redux';
+import store from '../store/store';
+import { AddBook } from '../BookshelfSectionList/bookshelf.slice';
+import { BookshelfBook } from '@components/scenes/types';
+import { useNavigation } from '@react-navigation/native';
 
 export const AddBookForm = () => {
   const {control, handleSubmit} = useForm();
+  const navigation = useNavigation()
+  const dispatch = useDispatch();
 
-  const onSubmit = data => console.log(data);
+  const onSubmit = (data: BookshelfBook) => {
+    console.log(data);
+    dispatch(AddBook(data));
+    console.log(store.getState());
+    navigation.goBack();
+  };
 
   return (
     <View style={styles.formView}>
