@@ -1,3 +1,5 @@
+import {GENRE, STATUS} from '@src/constants/screenEnums';
+
 interface BookBasic {
   title: string;
   author: string;
@@ -7,9 +9,9 @@ interface BookBasic {
 export type BookshelfBook = {
   title: string;
   author: string;
-  genre: string;
+  genre: GENRE[];
   pages?: number;
-  status?: string;
+  status?: STATUS;
   bookmark?: number;
   cover?: string;
 };
