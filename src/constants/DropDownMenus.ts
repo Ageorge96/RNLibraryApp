@@ -1,4 +1,5 @@
-import { GENRE, SORT, STATUS,  } from './screenEnums'
+import { DropDownItems } from '@components/customNative/DropDown/types';
+import {GENRE, SORT, STATUS} from './screenEnums';
 
 export const orderDropDown = {
   placeholder: 'Sorting order',
@@ -19,7 +20,8 @@ export const categoryDropDown = {
   ],
 };
 
-export const genreDropDownMenu = {
+export const genreDropDownMenu: DropDownItems = {
+  title: 'Genre*',
   placeholder: 'Select a genre',
   menuItems: [
     {label: GENRE.ACTION, value: GENRE.ACTION},
@@ -38,9 +40,11 @@ export const genreDropDownMenu = {
     {label: GENRE.THRILLER, value: GENRE.THRILLER},
     {label: GENRE.YA, value: GENRE.YA},
   ],
+  multiple: true,
 };
 
 export const statusDropDownMenu = {
+  title: 'Status*',
   placeholder: 'Select a status',
   menuItems: [
     {label: STATUS.READY, value: STATUS.READY},

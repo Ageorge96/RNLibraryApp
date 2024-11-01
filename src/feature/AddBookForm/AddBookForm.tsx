@@ -18,7 +18,6 @@ export const AddBookForm = () => {
   const dispatch = useDispatch();
 
   const onSubmit = (data: BookshelfBook) => {
-    console.log(data);
     dispatch(AddBook(data));
     console.log(store.getState());
     navigation.goBack();
@@ -42,12 +41,14 @@ export const AddBookForm = () => {
         <DropDownController
           control={control}
           name="genre"
+          required={true}
           dropDownItems={genreDropDownMenu}
           inverse
         />
         <DropDownController
           control={control}
           name="status"
+          required={true}
           dropDownItems={statusDropDownMenu}
           inverse
         />
@@ -66,7 +67,7 @@ export const AddBookForm = () => {
           queryProps={formProps.bookmark}
         />
       </View>
-      <QueryFieldController 
+      <QueryFieldController
         control={control}
         name="cover"
         required={false}
@@ -79,11 +80,11 @@ export const AddBookForm = () => {
 
 const formProps = {
   title: {
-    title: 'Title',
+    title: 'Title*',
     placeholder: 'Enter title',
   },
   author: {
-    title: 'Author',
+    title: 'Author*',
     placeholder: "Enter author's name",
   },
   pages: {
@@ -91,7 +92,7 @@ const formProps = {
     placeholder: '00',
   },
   bookmark: {
-    title: 'Bookmark (Optional)',
+    title: 'Bookmark',
     placeholder: '00',
   },
   cover: {

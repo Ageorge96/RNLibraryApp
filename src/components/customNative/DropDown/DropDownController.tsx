@@ -5,15 +5,17 @@ import {DropDownItems, DropDownProps} from './types';
 import {View} from 'react-native';
 
 type DropDownControllerProps = Omit<ControllerProps, 'render'> &
-  Omit<DropDownProps, 'handleSelect'>;
+  Omit<DropDownProps, 'handleSelect'> & {required: boolean};
 
 export const DropDownController = ({
   dropDownItems,
   inverse,
+  required,
   ...props
 }: DropDownControllerProps) => (
   <Controller
     {...props}
+    rules={{required: required}}
     render={({field: {onChange}}) => (
       <DropDown
         dropDownItems={dropDownItems}

@@ -2,25 +2,27 @@ import {useState} from 'react';
 import {styles} from './styles';
 import DropDownPicker from 'react-native-dropdown-picker';
 import {DropDownProps} from './types';
-import {themeSecondary} from '@src/theme/Theme';
-import {StyleProp} from 'react-native';
+import {View} from 'react-native';
+import {Text} from '@components/customNative/Text/Text';
 
 export const DropDown = ({
   dropDownItems,
   inverse,
   handleSelect,
 }: DropDownProps) => {
-  const {placeholder, menuItems} = dropDownItems;
+  const {title, placeholder, menuItems, multiple} = dropDownItems;
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
   const [items, setItems] = useState(menuItems);
 
   return (
-    <>
+    <View style={styles.QueryView}>
+      <Text style={styles.QueryTitle}>{title}</Text>
       <DropDownPicker
         open={open}
         value={value}
         items={items}
+        multiple={multiple}
         setOpen={setOpen}
         setValue={setValue}
         setItems={setItems}
@@ -41,6 +43,6 @@ export const DropDown = ({
         containerProps={{style: {width: 150, marginRight: 10}}}
         testID="dropDown"
       />
-    </>
+    </View>
   );
 };

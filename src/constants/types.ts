@@ -1,4 +1,4 @@
-import { GENRE, STATUS } from "./screenEnums";
+import {GENRE, STATUS} from './screenEnums';
 
 export type CompleteBook = {
   id: number;

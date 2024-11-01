@@ -6,7 +6,7 @@ import {
 } from '@components/scenes/types';
 import {useSelector} from 'react-redux';
 
-export const useBookshelfReducer = (/*user's book list*/) => {
+export const useBookshelfReducer = () => {
   const library = useSelector(state => state.bookshelf);
 
   const transformedBookshelfData: BookshelfSectionListProps = [
