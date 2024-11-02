@@ -2,11 +2,11 @@ import {BookshelfListItem} from '@components/scenes/bookshelfListItem/BookshelfL
 import {useBookshelfReducer} from '@src/reducer/useBookshelfReducer';
 import {themePrimary} from '@src/theme';
 import {SectionList, View, Text, StyleSheet, Pressable} from 'react-native';
-import { BookshelfHeader } from './BookshelfHeader';
-import { themeSecondary } from '@src/theme/Theme';
-import { useNavigation } from '@react-navigation/native';
-import { SCREENS } from '@src/constants/screenEnums';
-import { styles } from './styles';
+import {BookshelfHeader} from './BookshelfHeader';
+import {themeSecondary} from '@src/theme/Theme';
+import {useNavigation} from '@react-navigation/native';
+import {SCREENS} from '@src/constants/screenEnums';
+import {styles} from './styles';
 
 export const BookshelfSectionList = () => {
   const {transformedBookshelfData} = useBookshelfReducer();
@@ -47,13 +47,23 @@ export const BookshelfSectionList = () => {
           flexDirection: 'row',
           justifyContent: 'space-evenly',
         }}>
-        <Pressable style={[barStyles.barView, {borderEndWidth: 2}]} onPress={() => [navigation.navigate(SCREENS.ADDBOOK)]}>
+        <Pressable
+          style={[barStyles.barView, {borderEndWidth: 2}]}
+          onPress={() => [navigation.navigate(SCREENS.ADDBOOK)]}>
           <Text style={barStyles.bar}>Add Book</Text>
         </Pressable>
-        <Pressable style={barStyles.barView} onPress={() => {console.log('2')}}>
+        <Pressable
+          style={barStyles.barView}
+          onPress={() => {
+            console.log('2');
+          }}>
           <Text style={barStyles.bar}>Edit Book</Text>
         </Pressable>
-        <Pressable style={[barStyles.barView, {borderStartWidth: 2}]} onPress={() => {console.log('3')}}>
+        <Pressable
+          style={[barStyles.barView, {borderStartWidth: 2}]}
+          onPress={() => {
+            console.log('3');
+          }}>
           <Text style={barStyles.bar}>Remove Book</Text>
         </Pressable>
       </View>
