@@ -1,4 +1,4 @@
 export type QueryProps = {
-  title: string;
+  title?: string;
   placeholder: string;
 };

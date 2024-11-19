@@ -16,7 +16,7 @@ export const QueryField: React.FC<QueryFieldProps> = ({
 
   return (
     <View style={styles.queryView}>
-      <Text style={styles.queryTitle}>{title}</Text>
+      {title ? <Text style={styles.queryTitle}>{title}</Text> : undefined}
       <TextInput
         placeholder={placeholder}
         style={styles.textField}

@@ -5,6 +5,7 @@ export enum SCREENS {
   PROFILE = 'Profile',
   ADDBOOK = 'Add Book',
   BSSTACK = 'Bookshelf Stack',
+  COVER = 'Cover',
 }
 
 export enum NAVIGATORS {
