@@ -4680,7 +4680,7 @@ __metadata:
     ruby: "npm:^0.6.1"
     ts-jest: "npm:^29.1.2"
     typescript: "npm:5.0.4"
-    yarn: "npm:^1.22.22"
+    yarn: "npm:^3.6.4"
   languageName: unknown
   linkType: soft
 
@@ -13010,9 +13010,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yarn@npm:^1.22.22":
-  version: 1.22.22
-  resolution: "yarn@npm:1.22.22"
+"yarn@npm:^3.6.4":
+  version: 3.6.4
+  resolution: "yarn@npm:3.6.4"
   bin:
     yarn: bin/yarn.js
     yarnpkg: bin/yarn.js
