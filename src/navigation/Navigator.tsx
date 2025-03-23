@@ -1,10 +1,4 @@
-import {NavigationContainer} from '@react-navigation/native';
-import {DrawerNavigator} from './DrawerNavigator/DrawerNavigator';
-import {CustomTheme} from '@src/navigation/theme';
-import { RootStack } from './RootStack';
+import { RootStack,  } from './RootStack';
+import { createStaticNavigation } from '@react-navigation/native';
 
-export const Navigation = () => (
-  <NavigationContainer theme={CustomTheme}>
-    <RootStack />
-  </NavigationContainer>
-);
+export const Navigation = createStaticNavigation(RootStack)

@@ -6,7 +6,7 @@ import {Text} from '@components/customNative/Text/Text';
 import {DummyScreen} from '@src/feature/Carousel/dumy';
 
 // The same data should be able to be passed in without edit, adjustments to data should be handled within component
-export const Home = () => (
+export const HomeScreen = () => (
   <>
     <View style={styles.homeTitleView}>
       <Text style={styles.homeText}>My Bookmarks</Text>

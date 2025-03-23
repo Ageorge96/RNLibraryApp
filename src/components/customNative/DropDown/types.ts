@@ -1,5 +1,5 @@
 export type DropDownItems = {
-  title: string;
+  title?: string;
   placeholder: string;
   menuItems: {label: string; value: string}[];
   multiple?: boolean;

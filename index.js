@@ -6,9 +6,10 @@ import {App} from './src/App';
 import {name as appName} from './app.json';
 import Config from 'react-native-config';
 
-console.log(Config.ENABLE_STORYBOOK);
+// console.log(Config.ENABLE_STORYBOOK);
 
-let AppEntryPoint =
-  Config.ENABLE_STORYBOOK === 'true' ? require('./.storybook').default : App;
+// let AppEntryPoint =
+//   Config.ENABLE_STORYBOOK === 'true' ? require('./.storybook').default : App;
+let AppEntryPoint = App;
 
 AppRegistry.registerComponent(appName, () => AppEntryPoint);

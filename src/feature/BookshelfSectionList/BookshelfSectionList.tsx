@@ -5,7 +5,6 @@ import {SectionList, View, Text, StyleSheet, Pressable} from 'react-native';
 import {BookshelfHeader} from './BookshelfHeader';
 import {themeSecondary} from '@src/theme/Theme';
 import {useNavigation} from '@react-navigation/native';
-import {SCREENS} from '@src/constants/screenEnums';
 import {styles} from './styles';
 
 export const BookshelfSectionList = () => {
@@ -49,7 +48,7 @@ export const BookshelfSectionList = () => {
         }}>
         <Pressable
           style={[barStyles.barView, {borderEndWidth: 2}]}
-          onPress={() => [navigation.navigate(SCREENS.ADDBOOK)]}>
+          onPress={() => {navigation.navigate('Add')}}>
           <Text style={barStyles.bar}>Add Book</Text>
         </Pressable>
         <Pressable
