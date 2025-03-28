@@ -1,7 +1,7 @@
 import {DrawerNavigator} from './DrawerNavigator/DrawerNavigator';
-import {AddBook} from '@src/screens/AddBook';
 import {Profile} from '@src/screens/Profile';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { AddBookStack } from './AddBookStack';
 
 export const RootStack = createNativeStackNavigator({
   screens: {
@@ -9,14 +9,14 @@ export const RootStack = createNativeStackNavigator({
       screen: DrawerNavigator,
       options: {
         headerShown: false,
-      }
+      },
     },
-    Add: AddBook,
+    Add: AddBookStack,
     Profile: {
       screen: Profile,
       options: {
-        presentation: 'modal'
-      }
-    }
-  }
-})
+        presentation: 'modal',
+      },
+    },
+  },
+});
