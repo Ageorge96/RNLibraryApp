@@ -23,6 +23,7 @@ export const categoryDropDown = {
 export const genreDropDownMenu: DropDownItems = {
   title: 'Genre*',
   placeholder: 'Select a genre',
+  required: true,
   menuItems: [
     {label: GENRE.ACTION, value: GENRE.ACTION},
     {label: GENRE.BIOGRAPHICAL, value: GENRE.BIOGRAPHICAL},
@@ -43,9 +44,10 @@ export const genreDropDownMenu: DropDownItems = {
   multiple: true,
 };
 
-export const statusDropDownMenu = {
+export const statusDropDownMenu: DropDownItems = {
   title: 'Status*',
   placeholder: 'Select a status',
+  required: true,
   menuItems: [
     {label: STATUS.READY, value: STATUS.READY},
     {label: STATUS.ACTIVE, value: STATUS.ACTIVE},

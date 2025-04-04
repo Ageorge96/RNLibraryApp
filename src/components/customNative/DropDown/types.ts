@@ -1,6 +1,7 @@
 export type DropDownItems = {
   title?: string;
   placeholder: string;
+  required: boolean;
   menuItems: {label: string; value: string}[];
   multiple?: boolean;
 };

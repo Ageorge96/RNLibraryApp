@@ -1,35 +1,44 @@
-export interface BookshelfFormField {
-  required: boolean;
-  fieldProps: any;
+type BookshelfFormField = {
+  [K in keyof BookshelfFormKeys]: {
+    title: string;
+    placeholder: string;
+    required: boolean;}
 }
 
-export const BookshelfFormValues = {
+interface BookshelfFormKeys {
+  title: string;
+  author: string;
+  pages: string;
+  bookmark: string;
+  cover: string;
+}
+
+
+
+export const BookshelfFormValues: BookshelfFormField = {
   title: {
+    required: true,
     title: 'Title*',
     placeholder: 'Enter title',
   },
   author: {
     title: 'Author*',
+    required: true,
     placeholder: "Enter author's name",
   },
-  genre: {
-    title: 'Genre*',
-    placeholder: 'Select genre/s',
-  },
-  status: {
-    title: 'Status*',
-    placeholder: "Select book's status",
-  },
   pages: {
+    required: false,
     title: 'Total Pages',
     placeholder: '00',
   },
   bookmark: {
+    required: false,
     title: 'Bookmark',
     placeholder: '00',
   },
   cover: {
+    required: false,
     title: 'Cover',
     placeholder: 'Provide an image url',
   },
-};
+} ;

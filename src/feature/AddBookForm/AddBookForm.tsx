@@ -1,20 +1,26 @@
 import {styles} from './styles';
-import {useForm} from 'react-hook-form';
-import {StyleSheet, View} from 'react-native';
+import {FieldValue, useForm} from 'react-hook-form';
+import {View} from 'react-native';
 import {Button} from '@components/customNative/Button/Button';
 import {QueryFieldController} from '@components/compoundComponents/QueryField/QueryFieldController';
 import {DropDownController} from '@components/customNative/DropDown/DropDownController';
 import {NumberFieldController} from '@components/compoundComponents/QueryField/NumberFieldController';
-import { genreDropDownMenu, statusDropDownMenu } from '@src/constants/DropDownMenus';
-import { useDispatch } from 'react-redux';
+import {
+  genreDropDownMenu,
+  statusDropDownMenu,
+} from '@src/constants/DropDownMenus';
+import {useDispatch} from 'react-redux';
 import store from '../store/store';
-import { AddBook } from '../BookshelfSectionList/bookshelf.slice';
-import { BookshelfBook } from '@components/scenes/types';
-import { useNavigation } from '@react-navigation/native';
+import {AddBook} from '../BookshelfSectionList/bookshelf.slice';
+import {BookshelfBook} from '@components/scenes/types';
+import {useNavigation} from '@react-navigation/native';
+import {SCREENS} from '@src/constants/screenEnums';
+import {CoverNavigationProps} from '../CoverPreview/types';
+import {BookshelfFormValues} from './AddBookFieldValues';
 
 export const AddBookForm = () => {
-  const {control, handleSubmit} = useForm();
-  const navigation = useNavigation()
+  const {control, handleSubmit} = useForm<FieldValue>();
+  const navigation = useNavigation<CoverNavigationProps>();
   const dispatch = useDispatch();
 
   const onSubmit = (data: BookshelfBook) => {
@@ -23,32 +29,34 @@ export const AddBookForm = () => {
     navigation.goBack();
   };
 
+  const coverParams = {control: control, name: 'cover'};
+
+  const handlePreview = () => {
+    navigation.navigate(SCREENS.COVER, coverParams);
+  };
+
   return (
     <View style={styles.formView}>
       <QueryFieldController
         control={control}
         name="title"
-        required={true}
-        queryProps={formProps.title}
+        queryProps={BookshelfFormValues.title}
       />
       <QueryFieldController
         control={control}
         name="author"
-        required={true}
-        queryProps={formProps.author}
+        queryProps={BookshelfFormValues.author}
       />
       <View style={styles.dropDownView}>
         <DropDownController
           control={control}
           name="genre"
-          required={true}
           dropDownItems={genreDropDownMenu}
           inverse
         />
         <DropDownController
           control={control}
           name="status"
-          required={true}
           dropDownItems={statusDropDownMenu}
           inverse
         />
@@ -57,46 +65,18 @@ export const AddBookForm = () => {
         <NumberFieldController
           control={control}
           name="pages"
-          required={false}
-          queryProps={formProps.pages}
+          queryProps={BookshelfFormValues.pages}
         />
         <NumberFieldController
           control={control}
           name="bookmark"
-          required={false}
-          queryProps={formProps.bookmark}
+          queryProps={BookshelfFormValues.bookmark}
         />
       </View>
-      <QueryFieldController
-        control={control}
-        name="cover"
-        required={false}
-        queryProps={formProps.cover}
-      />
-      <Button title="Submit" onPress={handleSubmit(onSubmit)} />
+      <Button title="Preview cover" onPress={handlePreview} />
+      <View style={{marginTop: 15}}>
+        <Button title="Submit" onPress={handleSubmit(onSubmit)} />
+      </View>
     </View>
   );
-};
-
-const formProps = {
-  title: {
-    title: 'Title*',
-    placeholder: 'Enter title',
-  },
-  author: {
-    title: 'Author*',
-    placeholder: "Enter author's name",
-  },
-  pages: {
-    title: 'Total Pages',
-    placeholder: '00',
-  },
-  bookmark: {
-    title: 'Bookmark',
-    placeholder: '00',
-  },
-  cover: {
-    title: 'Cover',
-    placeholder: 'Provide an image url'
-  }
 };
