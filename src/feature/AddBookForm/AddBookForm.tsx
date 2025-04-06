@@ -1,14 +1,10 @@
 import {styles} from './styles';
-import {FieldValue, useForm} from 'react-hook-form';
+import {useForm} from 'react-hook-form';
 import {View} from 'react-native';
 import {Button} from '@components/customNative/Button/Button';
 import {QueryFieldController} from '@components/compoundComponents/QueryField/QueryFieldController';
 import {DropDownController} from '@components/customNative/DropDown/DropDownController';
 import {NumberFieldController} from '@components/compoundComponents/QueryField/NumberFieldController';
-import {
-  genreDropDownMenu,
-  statusDropDownMenu,
-} from '@src/constants/DropDownMenus';
 import {useDispatch} from 'react-redux';
 import store from '../store/store';
 import {AddBook} from '../BookshelfSectionList/bookshelf.slice';
@@ -16,10 +12,11 @@ import {BookshelfBook} from '@components/scenes/types';
 import {useNavigation} from '@react-navigation/native';
 import {SCREENS} from '@src/constants/screenEnums';
 import {CoverNavigationProps} from '../CoverPreview/types';
-import {BookshelfFormValues} from './AddBookFieldValues';
+import {BookshelfFormValues, genreDropDownMenu, statusDropDownMenu} from './AddBookFieldValues';
 
 export const AddBookForm = () => {
-  const {control, handleSubmit} = useForm<FieldValue>();
+  //TODO resolve useform type
+  const {control, handleSubmit} = useForm<any>();
   const navigation = useNavigation<CoverNavigationProps>();
   const dispatch = useDispatch();
 

@@ -1,11 +1,14 @@
-type BookshelfFormField = {
+import { DropDownItems } from "@components/customNative/DropDown/types";
+import { GENRE, STATUS } from "@src/constants/screenEnums";
+
+export type BookshelfFormFields = {
   [K in keyof BookshelfFormKeys]: {
     title: string;
     placeholder: string;
     required: boolean;}
 }
 
-interface BookshelfFormKeys {
+export interface BookshelfFormKeys {
   title: string;
   author: string;
   pages: string;
@@ -13,9 +16,7 @@ interface BookshelfFormKeys {
   cover: string;
 }
 
-
-
-export const BookshelfFormValues: BookshelfFormField = {
+export const BookshelfFormValues: BookshelfFormFields = {
   title: {
     required: true,
     title: 'Title*',
@@ -42,3 +43,39 @@ export const BookshelfFormValues: BookshelfFormField = {
     placeholder: 'Provide an image url',
   },
 } ;
+
+export const genreDropDownMenu: DropDownItems = {
+  title: 'Genre*',
+  placeholder: 'Select a genre',
+  required: true,
+  menuItems: [
+    {label: GENRE.ACTION, value: GENRE.ACTION},
+    {label: GENRE.BIOGRAPHICAL, value: GENRE.BIOGRAPHICAL},
+    {label: GENRE.CLASSICAL, value: GENRE.CLASSICAL},
+    {label: GENRE.CRIME, value: GENRE.CRIME},
+    {label: GENRE.FANTASY, value: GENRE.FANTASY},
+    {label: GENRE.HISTORICAL, value: GENRE.HISTORICAL},
+    {label: GENRE.HORROR, value: GENRE.HORROR},
+    {label: GENRE.LITERARY, value: GENRE.LITERARY},
+    {label: GENRE.MILITARY, value: GENRE.MILITARY},
+    {label: GENRE.MYSTERY, value: GENRE.MYSTERY},
+    {label: GENRE.NONFICTION, value: GENRE.NONFICTION},
+    {label: GENRE.ROMANCE, value: GENRE.ROMANCE},
+    {label: GENRE.SCIFI, value: GENRE.SCIFI},
+    {label: GENRE.THRILLER, value: GENRE.THRILLER},
+    {label: GENRE.YA, value: GENRE.YA},
+  ],
+  multiple: true,
+};
+
+export const statusDropDownMenu: DropDownItems = {
+  title: 'Status*',
+  placeholder: 'Select a status',
+  required: true,
+  menuItems: [
+    {label: STATUS.READY, value: STATUS.READY},
+    {label: STATUS.ACTIVE, value: STATUS.ACTIVE},
+    {label: STATUS.FINISHED, value: STATUS.FINISHED},
+    {label: STATUS.NEXT, value: STATUS.NEXT},
+  ],
+};
