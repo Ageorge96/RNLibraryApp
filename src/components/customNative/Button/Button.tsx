@@ -1,5 +1,8 @@
-import {themePrimary} from '@src/theme';
-import {GestureResponderEvent, Button as RNBtn} from 'react-native';
+import {GestureResponderEvent, TouchableOpacity} from 'react-native';
+import { Text } from 'react-native-gesture-handler';
+import { styles } from './styles';
+import { themePrimary } from '@src/theme';
+
 
 export const Button = ({
   title,
@@ -7,9 +10,10 @@ export const Button = ({
   onPress,
 }: {
   title: string;
+  theme?: string;
   onPress: ((event: GestureResponderEvent) => void) | undefined;
 }) => (
-  <>
-    <RNBtn title={title} onPress={onPress} color={theme} />
-  </>
+  <TouchableOpacity onPress={onPress} style={[styles.FormButton, {backgroundColor: theme}]}>
+    <Text style={styles.ButtonText}>{title}</Text>
+  </TouchableOpacity>
 );

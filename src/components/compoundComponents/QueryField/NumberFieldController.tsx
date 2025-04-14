@@ -5,16 +5,18 @@ import {QueryField} from './QueryField';
 
 export const NumberFieldController = ({
   queryProps,
-  required,
   ...props
-}: QueryFieldControllerProps) => (
-  <View>
-    <Controller
-      {...props}
-      rules={{required: required, maxLength: 4, pattern: /^[0-9]+$/}}
-      render={({field: {onChange}}) => (
-        <QueryField queryProps={queryProps} onChangeText={onChange} />
-      )}
-    />
-  </View>
-);
+}: QueryFieldControllerProps) => {
+  const {required} = queryProps;
+  return (
+    <View>
+      <Controller
+        {...props}
+        rules={{required: required, maxLength: 4, pattern: /^[0-9]+$/}}
+        render={({field: {onChange}}) => (
+          <QueryField queryProps={queryProps} onChangeText={onChange} />
+        )}
+      />
+    </View>
+  );
+};
