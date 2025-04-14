@@ -24,7 +24,7 @@ export const CoverPreview = ({route}: CoverPreviewProps) => {
           <>
             <QueryField queryProps={coverProps} onChangeText={onChange} />
             <View style={styles.imgView}>
-              {value ? (
+              {value != '' && value ? (
                 <Cover cover={value} style={styles.cover} />
               ) : (
                 <Image

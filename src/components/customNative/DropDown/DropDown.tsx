@@ -26,7 +26,7 @@ export const DropDown = ({
         setOpen={setOpen}
         setValue={setValue}
         setItems={setItems}
-        onChangeValue={selectedItem => {
+        onChangeValue={(selectedItem: string | null) => {
           handleSelect(selectedItem);
         }}
         placeholder={placeholder}
@@ -40,7 +40,7 @@ export const DropDown = ({
         }
         textStyle={inverse ? styles.FontStyleInverse : styles.FontStyle}
         arrowIconStyle={inverse ? styles.ArrowIconInverse : styles.ArrowIcon}
-        containerProps={{style: {width: 150, marginRight: 10}}}
+        containerProps={{style: styles.ContainerProp}}
         testID="dropDown"
       />
     </View>

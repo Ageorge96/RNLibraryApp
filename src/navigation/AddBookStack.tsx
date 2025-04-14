@@ -1,11 +1,11 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { AddBookForm } from '@src/feature/AddBookForm/AddBookForm';
-import { CoverPreview } from '@src/feature/CoverPreview/CoverPreview';
+import { CoverModal } from '@src/screens/CoverModal';
 
 export const AddBookStack = createNativeStackNavigator({
   screens: {
     AddBook: AddBookForm,
-    Cover: CoverPreview
+    Cover: {screen: CoverModal, options: {presentation: 'modal'}}
   },
   screenOptions: {
     headerShown: false,

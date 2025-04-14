@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-evenly',
     margin: 10,
+    paddingVertical: 15
   },
   dropDownInverse: {backgroundColor: backgroundPrimary, borderColor: 'black'},
   dropDownView: {
