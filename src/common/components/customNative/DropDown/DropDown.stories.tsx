@@ -1,8 +1,8 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { DropDown } from './DropDown';
-import { SORT } from '@src/constants/screenEnums';
-import { View } from 'react-native';
-import { backgroundPrimary } from '@src/theme/Theme';
+import {Meta, StoryObj} from '@storybook/react';
+import {DropDown} from './DropDown';
+import {SORT} from '@src/common/constants/screenEnums';
+import {View} from 'react-native';
+import {backgroundPrimary} from '@src/theme/Theme';
 
 type Story = StoryObj<typeof DropDown>;
 
@@ -11,7 +11,13 @@ const DropDownMeta: Meta<typeof DropDown> = {
   component: DropDown,
   decorators: [
     Story => (
-      <View style={{justifyContent: 'center', alignItems: 'center', flex: 1, backgroundColor: backgroundPrimary}}>
+      <View
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          flex: 1,
+          backgroundColor: backgroundPrimary,
+        }}>
         <Story />
       </View>
     ),

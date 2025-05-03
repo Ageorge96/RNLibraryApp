@@ -10,7 +10,7 @@ import store from '../store/store';
 import {AddBook} from '../BookshelfSectionList/bookshelf.slice';
 import {BookshelfBook} from '@components/scenes/types';
 import {useNavigation} from '@react-navigation/native';
-import {SCREENS} from '@src/constants/screenEnums';
+import {SCREENS} from '@src/common/constants/screenEnums';
 import {CoverNavigationProps} from '../CoverPreview/types';
 import {BookshelfFormValues, genreDropDownMenu, statusDropDownMenu} from './AddBookFieldValues';
 

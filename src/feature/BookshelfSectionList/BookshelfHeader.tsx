@@ -2,7 +2,7 @@ import {View} from 'react-native';
 import {Text} from '@components/customNative/Text/Text';
 import {styles} from './styles';
 import {DropDown} from '@components/customNative/DropDown/DropDown';
-import {categoryDropDown, orderDropDown} from '@src/constants/DropDownMenus';
+import {categoryDropDown, orderDropDown} from '@src/common/constants/DropDownMenus';
 
 export const BookshelfHeader = () => (
   <View style={styles.BookshelfHeaderContainer}>

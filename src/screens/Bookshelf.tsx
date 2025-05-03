@@ -3,7 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export const Bookshelf = createNativeStackNavigator({
   screens: {
-    Bookshelf: BookshelfSectionList,
+    BookshelfScreen: BookshelfSectionList,
   },
   screenOptions: {
     headerShown: false

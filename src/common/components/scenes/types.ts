@@ -1,4 +1,4 @@
-import {GENRE, STATUS} from '@src/constants/screenEnums';
+import {GENRE, STATUS} from '@src/common/constants/screenEnums';
 
 interface BookBasic {
   title: string;

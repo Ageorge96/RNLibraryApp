@@ -4,6 +4,8 @@ import {HomeScreen} from '@src/screens/HomeScreen';
 import {styles} from './styles';
 import {Profile} from '@src/screens/Profile';
 import { DrawerCustomerView } from './DrawerCustomView';
+import { DrawerScreenName } from '../navigationTypes';
+
 
 export const DrawerNavigator = createDrawerNavigator({
   screens: {

@@ -1,5 +1,5 @@
-import {completeBookMockData} from '@src/constants/MockData';
-import {CompleteBook} from '@src/constants/types';
+import {completeBookMockData} from '@src/common/constants/MockData';
+import {CompleteBook} from '@src/common/constants/types';
 import {
   BookshelfBook,
   BookshelfSectionListProps,

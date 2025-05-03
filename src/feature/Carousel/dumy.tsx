@@ -9,7 +9,7 @@ import Animated, {
   useSharedValue,
 } from 'react-native-reanimated';
 import {HomeScreenFlatList} from '../HomeFlatListSection/HomeScreenFlatList';
-import {CoverList, wishlistData} from '@src/constants/MockData';
+import {CoverList, wishlistData} from '@src/common/constants/MockData';
 
 const MeasureElement = ({onLayout, children}) => (
   <Animated.ScrollView
@@ -123,7 +123,7 @@ export const DummyScreen = () => {
         <Marquee reverse={reverse}>
           <View style={styles.carouselDirection}>
             {CoverList.map((cover, index) => (
-              <View style={styles.childView } key={index}>
+              <View style={styles.childView} key={index}>
                 <Cover cover={cover} title="d" />
               </View>
             ))}

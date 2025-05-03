@@ -1,12 +1,13 @@
-import { DropDownItems } from "@components/customNative/DropDown/types";
-import { GENRE, STATUS } from "@src/constants/screenEnums";
+import {DropDownItems} from '@components/customNative/DropDown/types';
+import {GENRE, STATUS} from '@src/common/constants/screenEnums';
 
 export type BookshelfFormFields = {
   [K in keyof BookshelfFormKeys]: {
     title: string;
     placeholder: string;
-    required: boolean;}
-}
+    required: boolean;
+  };
+};
 
 export interface BookshelfFormKeys {
   title: string;
@@ -42,7 +43,7 @@ export const BookshelfFormValues: BookshelfFormFields = {
     title: 'Cover',
     placeholder: 'Provide an image url',
   },
-} ;
+};
 
 export const genreDropDownMenu: DropDownItems = {
   title: 'Genre*',

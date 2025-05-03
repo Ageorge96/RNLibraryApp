@@ -1,6 +1,6 @@
 import {BookshelfBook} from '@components/scenes/types';
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {GENRE, STATUS} from '@src/constants/screenEnums';
+import {GENRE, STATUS} from '@src/common/constants/screenEnums';
 
 const exampleBook: BookshelfBook = {
   title: 'Halo: The Fall of Reach',
